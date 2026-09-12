@@ -1,5 +1,5 @@
 import {env} from 'cloudflare:workers';
-import {advance,bid,canBid,teams,type Game} from '@/lib/game';
+import {advance,bid,canBid,teams,nextPrice,createAuctionOrder,type Game} from '@/lib/game';
 export const dynamic='force-dynamic';
 function database(){if(!env.DB)throw new Error('The auction service is unavailable. Please try again.');return env.DB}
 function token(req:Request){return req.headers.get('cookie')?.match(/(?:^|; )paddle_session=([a-f0-9-]{36})/)?.[1]||crypto.randomUUID()}
@@ -13,7 +13,7 @@ async function handle(req:Request){try{
  if(data.action==='create'){
    if(!teams.some(x=>x.id===data.team)||typeof data.name!=='string'||!data.name.trim())throw new Error('Enter your name and choose a team.');
    const code=crypto.randomUUID().replaceAll('-','').slice(0,8).toUpperCase();
-   const g:Game={code,host:t,phase:'lobby',seats:{},index:0,price:0,leader:null,deadline:0,nextBot:0,passed:[],log:['Auction room created. Welcome to the table.'],round:1};
+   const g:Game={order:createAuctionOrder(),code,host:t,phase:'lobby',seats:{},index:0,price:0,leader:null,deadline:0,nextBot:0,passed:[],log:['Auction room created. Welcome to the table.'],round:1};
    g.seats[data.team]={name:data.name.trim().slice(0,24),token:t,bot:false,purse:12000,squad:[]};
    if(data.solo){for(const team of teams)if(!g.seats[team.id])g.seats[team.id]={name:'Computer',token:'',bot:true,purse:12000,squad:[]}}
    await db.prepare('INSERT INTO rooms (code,state,version) VALUES (?,?,0)').bind(code,JSON.stringify(g)).run();return response(g,t);
@@ -30,7 +30,7 @@ async function handle(req:Request){try{
    }else if(data.action==='start'){
      if(g.host!==t||g.phase!=='lobby')throw new Error('Only the host can start the auction.');for(const team of teams)if(!g.seats[team.id])g.seats[team.id]={name:'Computer',token:'',bot:true,purse:12000,squad:[]};g.phase='live';g.deadline=Date.now()+14000;g.nextBot=Date.now()+2500;
    }else if(data.action==='bid'){
-     if(g.phase!=='live'||!mine||!canBid(g,mine))throw new Error('Bid unavailable: check your purse, squad limits, or current bid.');if(data.round!==g.round||data.amount!==(g.leader?g.price+(g.price<100?5:g.price<200?10:25):[200,100,30][g.index<18?0:g.index<40?1:2]))throw new Error('The bid changed. Review the new price and bid again.');bid(g,mine,Date.now());
+     if(g.phase!=='live'||!mine||!canBid(g,mine))throw new Error('Bid unavailable: check your purse, squad limits, or current bid.');if(data.round!==g.round||data.amount!==nextPrice(g))throw new Error('The bid changed. Review the new price and bid again.');bid(g,mine,Date.now());
    }else if(data.action==='pass'){
      if(g.phase!=='live'||!mine||g.leader===mine)throw new Error('You cannot pass while holding the highest bid.');if(!g.passed.includes(mine))g.passed.push(mine);
    }

@@ -366,27 +366,38 @@ const names = [
  ["Dhurmil Matkar", "AR", "India"],
  ["Shiva Singh", "AR", "India"],
  ["Parikshit Valsangkar", "AR", "India"],
+ ["Vaibhav Sooryavanshi","BAT","India"],
+ ["Kagiso Rabada","BOWL","South Africa"],
+ ["Sai Sudharsan","BAT","India"],
 ];
-export const players = names.map(([name,role,country],id)=>({id,name,role,country,base:id<18?200:id<40?100:30,value:id<18?1100+(id*173)%900:200+(id*139)%700}));
+// Curated fantasy marquee set: original marquee names plus retained stars and recent IPL leaders.
+export const marqueeNames=new Set([...names.slice(0,18).map(p=>p[0]),...names.slice(60,85).map(p=>p[0]),'Bhuvneshwar Kumar','Jofra Archer','Prasidh Krishna','Vaibhav Sooryavanshi','Kagiso Rabada','Sai Sudharsan']);
+export const players = names.map(([name,role,country],id)=>({id,name,role,country,marquee:marqueeNames.has(name),base:marqueeNames.has(name)?200:id<40?100:30,value:marqueeNames.has(name)?1100+(id*173)%900:200+(id*139)%700}));
+export const createAuctionOrder=()=>[...players.filter(p=>p.marquee),...players.filter(p=>!p.marquee)].map(p=>p.id);
+export const auctionPlayers=(g:Game)=>(g.order||players.map(p=>p.id)).map(id=>players[id]);
+export const currentPlayer=(g:Game)=>players[g.order?.[g.index]??g.index];
+export const lotOf=(g:Game,id:number)=>g.order?g.order.indexOf(id):id;
+export const bidIncrement=(price:number)=>price<100?10:price<500?20:price<1000?25:30;
+
 export const money = (n:number)=>`₹${(n/100).toFixed(2)} Cr`;
 export type Seat = {name:string,token:string,bot:boolean,purse:number,squad:{player:number,price:number}[]};
-export type Game = {code:string,host:string,phase:'lobby'|'live'|'sold'|'finished',seats:Record<string,Seat>,index:number,price:number,leader:string|null,deadline:number,nextBot:number,passed:string[],log:string[],round:number};
-export const nextPrice=(g:Game)=>g.leader?g.price+(g.price<100?5:g.price<200?10:25):players[g.index]?.base||30;
-export function canBid(g:Game,id:string){const s=g.seats[id],p=players[g.index];return !!s&&!!p&&s.purse>=nextPrice(g)&&s.squad.length<25&&(p.country==='India'||s.squad.filter(x=>players[x.player].country!=='India').length<8)&&g.leader!==id&&!g.passed.includes(id)}
-export function bid(g:Game,id:string,now:number){g.price=nextPrice(g);g.leader=id;g.deadline=now+10000;g.nextBot=now+1800+Math.random()*1800;g.log.unshift(`${id} bid ${money(g.price)} for ${players[g.index].name}`);g.log=g.log.slice(0,40)}
+export type Game = {order?:number[];code:string,host:string,phase:'lobby'|'live'|'sold'|'finished',seats:Record<string,Seat>,index:number,price:number,leader:string|null,deadline:number,nextBot:number,passed:string[],log:string[],round:number};
+export const nextPrice=(g:Game)=>g.leader?g.price+bidIncrement(g.price):currentPlayer(g)?.base||30;
+export function canBid(g:Game,id:string){const s=g.seats[id],p=currentPlayer(g);return !!s&&!!p&&s.purse>=nextPrice(g)&&s.squad.length<25&&(p.country==='India'||s.squad.filter(x=>players[x.player].country!=='India').length<8)&&g.leader!==id&&!g.passed.includes(id)}
+export function bid(g:Game,id:string,now:number){g.price=nextPrice(g);g.leader=id;g.deadline=now+10000;g.nextBot=now+1800+Math.random()*1800;g.log.unshift(`${id} bid ${money(g.price)} for ${currentPlayer(g).name}`);g.log=g.log.slice(0,40)}
 export function advance(g:Game,now:number){
- if(g.phase==='sold'&&now>=g.deadline){g.index++;g.round++;g.price=0;g.leader=null;g.passed=[];g.phase=g.index>=players.length?'finished':'live';g.deadline=now+14000;g.nextBot=now+2500}
+ if(g.phase==='sold'&&now>=g.deadline){g.index++;g.round++;g.price=0;g.leader=null;g.passed=[];g.phase=g.index>=(g.order?.length||players.length)?'finished':'live';g.deadline=now+14000;g.nextBot=now+2500}
  if(g.phase!=='live')return;
- if(now>=g.deadline){if(g.leader){const s=g.seats[g.leader];s.purse-=g.price;s.squad.push({player:g.index,price:g.price});g.log.unshift(`SOLD • ${players[g.index].name} → ${g.leader} for ${money(g.price)}`)}else g.log.unshift(`UNSOLD • ${players[g.index].name}`);g.phase='sold';g.deadline=now+3500;return}
- if(now>=g.nextBot){const eligible=teams.filter(t=>g.seats[t.id]?.bot&&canBid(g,t.id)&&nextPrice(g)<=players[g.index].value*(0.72+((g.index+t.id.charCodeAt(0))%7)/10));if(eligible.length)bid(g,eligible[Math.floor(Math.random()*eligible.length)].id,now);else g.nextBot=now+2000}
+ if(now>=g.deadline){if(g.leader){const s=g.seats[g.leader];s.purse-=g.price;s.squad.push({player:currentPlayer(g).id,price:g.price});g.log.unshift(`SOLD • ${currentPlayer(g).name} → ${g.leader} for ${money(g.price)}`)}else g.log.unshift(`UNSOLD • ${currentPlayer(g).name}`);g.phase='sold';g.deadline=now+3500;return}
+ if(now>=g.nextBot){const eligible=teams.filter(t=>g.seats[t.id]?.bot&&canBid(g,t.id)&&nextPrice(g)<=currentPlayer(g).value*(0.72+((g.index+t.id.charCodeAt(0))%7)/10));if(eligible.length)bid(g,eligible[Math.floor(Math.random()*eligible.length)].id,now);else g.nextBot=now+2000}
 }
 
 // A record is announced only for a completed, awarded sale, never a live bid.
 export function isRecordSale(g:Game){
  if(g.phase!=='sold'||!g.leader)return false;
- const sale=g.seats[g.leader]?.squad.find(s=>s.player===g.index);
+ const sale=g.seats[g.leader]?.squad.find(s=>s.player===currentPlayer(g)?.id);
  if(!sale)return false;
- const previous=Object.values(g.seats).flatMap(s=>s.squad).filter(s=>s.player<g.index);
+ const previous=Object.values(g.seats).flatMap(s=>s.squad).filter(s=>lotOf(g,s.player)<g.index);
  return previous.length>0&&sale.price>Math.max(...previous.map(s=>s.price));
 }
 
@@ -394,5 +405,5 @@ export function isRecordSale(g:Game){
 export function auctionResults(g:Game){
  const completed=g.phase==='finished'?Math.min(g.index,players.length):g.index+(g.phase==='sold'?1:0);
  const awards=new Map(Object.entries(g.seats).flatMap(([id,seat])=>seat.squad.map(s=>[s.player,{team:teams.find(t=>t.id===id),price:s.price}] as const)));
- return players.slice(0,completed).map(player=>({player,team:awards.get(player.id)?.team,price:awards.get(player.id)?.price||0})).reverse();
+ return auctionPlayers(g).slice(0,completed).map(player=>({player,team:awards.get(player.id)?.team,price:awards.get(player.id)?.price||0})).reverse();
 }

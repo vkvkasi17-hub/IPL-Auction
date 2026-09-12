@@ -1384,5 +1384,23 @@
     "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F87066.png&brand=ipl",
     "sha256": "436e0d49164fc2841f1933097d853f62b95dcab963f414223099c84756a71a56",
     "bytes": 48314
+  },
+  "Vaibhav Sooryavanshi": {
+    "name": "Vaibhav Sooryavanshi",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F83313.png&brand=ipl",
+    "sha256": "99cf08eb92f925656719c6dd2497363411f7c6d740c11e8a93cdc71b129809b0",
+    "bytes": 45973
+  },
+  "Kagiso Rabada": {
+    "name": "Kagiso Rabada",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F19720.png&brand=ipl",
+    "sha256": "e1effc82d54570c96190f5367ab4e27f31080b8d521f44332242309212ec140d",
+    "bytes": 47254
+  },
+  "Sai Sudharsan": {
+    "name": "Sai Sudharsan",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F74538.png&brand=ipl",
+    "sha256": "b13d0964cc0c78710d12f521e5486497961a6fd1d00d467967d682d8cbc0553e",
+    "bytes": 46386
   }
 }

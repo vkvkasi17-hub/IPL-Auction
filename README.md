@@ -122,7 +122,7 @@ npm run build
 
 ## Format and limitations
 
-This version is a 421-player fantasy auction, with illustrative base prices and a ₹120 Cr purse. It enforces the 25-player and 8-overseas maximums. It does not implement season retentions, Right to Match, accelerated auctions or the official 18-player minimum. It is not an official IPL product or an exact recreation of a particular season. AI bidding is heuristic. There is no monetary payment or wagering.
+This version is a 424-player fantasy auction, with illustrative base prices and a ₹120 Cr purse. It enforces the 25-player and 8-overseas maximums. It does not implement season retentions, Right to Match, accelerated auctions or the official 18-player minimum. It is not an official IPL product or an exact recreation of a particular season. AI bidding is heuristic. There is no monetary payment or wagering.
 
 The shared clock and AI advance on connected clients' requests, approximately once per second. When everyone disconnects, the current expired lot settles at reconnect and subsequent rounds resume; it is not a background autonomous auction scheduler. Authentication uses device sessions, with no cross-device account recovery. Each franchise needs a separate browser profile/device. For broader production use, add room lifecycle expiry, rate limiting, abuse protection and full account recovery.
 

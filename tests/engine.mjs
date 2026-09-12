@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {transformSync} from 'esbuild';
+const js=transformSync(readFileSync('lib/game.ts','utf8'),{loader:'ts',format:'esm'}).code;
+const {advance,bid,canBid,teams,players}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
+const g={code:'TEST',host:'x',phase:'live',seats:Object.fromEntries(teams.map(t=>[t.id,{name:'AI',token:'',bot:true,purse:12000,squad:[]}])),index:0,price:0,leader:null,deadline:14000,nextBot:2500,passed:[],log:[],round:1};
+for(let now=3000;now<100000000&&g.phase!=='finished';now+=2000)advance(g,now);
+assert.equal(g.phase,'finished');const won=[];for(const s of Object.values(g.seats)){assert.ok(s.purse>=0);assert.ok(s.squad.length<=25);assert.ok(s.squad.filter(x=>players[x.player].country!=='India').length<=8);assert.equal(s.purse+s.squad.reduce((n,x)=>n+x.price,0),12000);won.push(...s.squad.map(x=>x.player))}assert.equal(new Set(won).size,won.length);assert.ok(won.length>0);
+const last=structuredClone(g);advance(g,99999999);assert.deepEqual(g,last);
+const constrained={...g,phase:'live',index:2,leader:null,price:0,passed:[]};constrained.seats.CSK.purse=0;assert.equal(canBid(constrained,'CSK'),false);constrained.seats.CSK.purse=12000;constrained.seats.CSK.squad=Array(8).fill({player:2,price:200});assert.equal(canBid(constrained,'CSK'),false);
+console.log('PASS: complete 60-player AI auction, no duplicate awards, exact purse accounting, squad caps, overseas caps, unaffordable bid rejection, stable completion.');

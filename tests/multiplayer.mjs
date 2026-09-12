@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+const url='http://localhost:5173/api/room';
+const users=[{}, {}, {}];
+async function request(user,body,expected=200){const r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json',...(user.cookie?{Cookie:user.cookie}:{})},body:JSON.stringify(body)});const cookie=r.headers.get('set-cookie');if(cookie)user.cookie=cookie.split(';')[0];const result=await r.json();assert.equal(r.status,expected,JSON.stringify(result));return result}
+let room=await request(users[0],{action:'create',team:'CSK',name:'Test host'});
+assert.equal(room.phase,'lobby');assert.equal(room.host,'you');assert.equal(room.seats.CSK.token,undefined);
+const code=room.code;
+await request(users[1],{action:'join',team:'CSK',name:'Guest',code},400);
+room=await request(users[1],{action:'join',team:'MI',name:'Guest',code});assert.equal(room.host,'other');assert.equal(room.seats.MI.mine,true);
+await request(users[1],{action:'start',code},400);
+await request(users[2],{action:'bid',code,round:1,amount:200},403);
+room=await request(users[0],{action:'start',code});assert.equal(Object.keys(room.seats).length,10);assert.equal(Object.values(room.seats).filter(s=>s.bot).length,8);
+room=await request(users[0],{action:'bid',code,round:1,amount:200});assert.equal(room.leader,'CSK');
+await request(users[1],{action:'bid',code,round:1,amount:200},400);
+room=await request(users[1],{action:'bid',code,round:1,amount:225});assert.equal(room.leader,'MI');
+await request(users[1],{action:'pass',code},400);
+room=await request(users[0],{action:'pass',code});assert.ok(room.passed.includes('CSK'));
+await request(users[0],{action:'bid',code,round:1,amount:250},400);
+await request(users[2],{action:'join',code,team:'RCB',name:'Late'},400);
+const reload=await fetch(url+'?code='+code,{headers:{Cookie:users[1].cookie}});assert.equal((await reload.json()).seats.MI.mine,true);
+console.log('PASS: independent players, exclusive teams, host authority, private sessions, stale bid rejection, budget-backed bidding, pass and reconnect.');

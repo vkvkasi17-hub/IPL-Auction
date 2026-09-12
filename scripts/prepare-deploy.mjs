@@ -1,0 +1,10 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+const [databaseId,workerName='paddle-auction']=process.argv.slice(2);
+if(!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(databaseId||''))throw new Error('Usage: node scripts/prepare-deploy.mjs YOUR_D1_DATABASE_ID [worker-name]');
+if(!/^[a-z][a-z0-9-]{0,62}$/.test(workerName))throw new Error('Use a lowercase Worker name containing letters, digits and hyphens.');
+const path='dist/server/wrangler.json';
+const config=JSON.parse(readFileSync(path,'utf8'));
+config.name=workerName;
+config.d1_databases=[{binding:'DB',database_name:'paddle-auction-db',database_id:databaseId,migrations_dir:'../../drizzle'}];
+writeFileSync(path,JSON.stringify(config,null,2)+'\n');
+console.log('Configured your Worker and D1 database. Re-run this script after every build.');

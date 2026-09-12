@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {transformSync} from 'esbuild';
 const js=transformSync(readFileSync('lib/game.ts','utf8'),{loader:'ts',format:'esm'}).code;
-const {advance,bid,canBid,teams,players}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
+const {advance,bid,canBid,teams,players,isRecordSale}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
 const g={code:'TEST',host:'x',phase:'live',seats:Object.fromEntries(teams.map(t=>[t.id,{name:'AI',token:'',bot:true,purse:12000,squad:[]}])),index:0,price:0,leader:null,deadline:14000,nextBot:2500,passed:[],log:[],round:1};
 for(let now=3000;now<100000000&&g.phase!=='finished';now+=2000)advance(g,now);
 assert.equal(g.phase,'finished');const won=[];for(const s of Object.values(g.seats)){assert.ok(s.purse>=0);assert.ok(s.squad.length<=25);assert.ok(s.squad.filter(x=>players[x.player].country!=='India').length<=8);assert.equal(s.purse+s.squad.reduce((n,x)=>n+x.price,0),12000);won.push(...s.squad.map(x=>x.player))}assert.equal(new Set(won).size,won.length);assert.ok(won.length>0);
@@ -11,3 +11,11 @@ const constrained={...g,phase:'live',index:2,leader:null,price:0,passed:[]};cons
 console.log('PASS: complete 60-player AI auction, no duplicate awards, exact purse accounting, squad caps, overseas caps, unaffordable bid rejection, stable completion.');
 
 const lobby={...structuredClone(g),phase:'lobby',deadline:0,nextBot:0,index:0};const untouched=structuredClone(lobby);advance(lobby,999999999);assert.deepEqual(lobby,untouched);console.log('PASS: lobby never advances timers or computer bids.');
+
+const record={...structuredClone(g),index:1,phase:'live',leader:'CSK',price:500,seats:{CSK:{name:'Host',token:'x',bot:false,purse:11000,squad:[{player:0,price:200}]}}};
+assert.equal(isRecordSale(record),false,'live prices must never announce a record');
+record.phase='sold';assert.equal(isRecordSale(record),false,'sale must be awarded');
+record.seats.CSK.squad.push({player:1,price:500});assert.equal(isRecordSale(record),true);
+record.seats.CSK.squad[1].price=200;assert.equal(isRecordSale(record),false,'ties do not beat record');
+record.phase='finished';assert.equal(isRecordSale(record),false);
+console.log('PASS: record banner only for confirmed sold award above previous sales, never live bids or ties.');

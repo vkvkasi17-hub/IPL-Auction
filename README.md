@@ -133,3 +133,5 @@ The entrance guides managers through franchise and opponent selection. Both solo
 Edit `components/entrance.tsx` for the welcome and setup screens, `app/page.tsx` for the auction and sales board, and `app/globals.css` for the colorful glass styling.
 
 Mobile uses a fixed bidding dock with the current player, countdown, purse, and Bid/Pass controls. Each room has ten playing seats. Audience guests enter through Join as audience or a shared audience link; they cannot bid, pass, or start the auction. CSS 3D signing celebrations and record-price highlights respect reduced-motion settings. The new Worker shares the existing D1 database; old room codes remain available, but browser login sessions are specific to each website hostname.
+
+Reload restores the active room using its URL and session cookie. Home is an explicit navigation action and retains Return to room, including audience rooms. The room-code button copies only the eight-character code; Invite audience copies a watch link. Highest-price highlights appear only after a confirmed record sale. The free workers.dev address requires a separately registered custom domain to replace it.

@@ -17,3 +17,12 @@ export function advance(g:Game,now:number){
  if(now>=g.deadline){if(g.leader){const s=g.seats[g.leader];s.purse-=g.price;s.squad.push({player:g.index,price:g.price});g.log.unshift(`SOLD • ${players[g.index].name} → ${g.leader} for ${money(g.price)}`)}else g.log.unshift(`UNSOLD • ${players[g.index].name}`);g.phase='sold';g.deadline=now+3500;return}
  if(now>=g.nextBot){const eligible=teams.filter(t=>g.seats[t.id]?.bot&&canBid(g,t.id)&&nextPrice(g)<=players[g.index].value*(0.72+((g.index+t.id.charCodeAt(0))%7)/10));if(eligible.length)bid(g,eligible[Math.floor(Math.random()*eligible.length)].id,now);else g.nextBot=now+2000}
 }
+
+// A record is announced only for a completed, awarded sale, never a live bid.
+export function isRecordSale(g:Game){
+ if(g.phase!=='sold'||!g.leader)return false;
+ const sale=g.seats[g.leader]?.squad.find(s=>s.player===g.index);
+ if(!sale)return false;
+ const previous=Object.values(g.seats).flatMap(s=>s.squad).filter(s=>s.player<g.index);
+ return previous.length>0&&sale.price>Math.max(...previous.map(s=>s.price));
+}

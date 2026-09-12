@@ -1,6 +1,6 @@
-# Mock Auction
+# IPL Mock Auction
 
-[Play the live website](https://paddle-auction.vkvkasi17.workers.dev) · [GitHub repository](https://github.com/vkvkasi17-hub/IPL-Auction)
+[Play the live website](https://ipl-mock-auction.vkvkasi17.workers.dev) · [GitHub repository](https://github.com/vkvkasi17-hub/IPL-Auction)
 
 Automatic Cloudflare deployment is connected. Push to `main` to run checks, apply database migrations, and publish updates to the live website. See [DEPLOYMENT.md](DEPLOYMENT.md). The earlier Sites demo is hosted separately and is not updated by GitHub pushes.
 
@@ -77,7 +77,7 @@ Then build and configure deployment:
 
 ```sh
 npm run build
-node scripts/prepare-deploy.mjs f28d2824-a7b9-4b5a-999e-ab84e9218798 paddle-auction
+node scripts/prepare-deploy.mjs f28d2824-a7b9-4b5a-999e-ab84e9218798 ipl-mock-auction
 npx wrangler d1 migrations apply DB --remote --config dist/server/wrangler.json
 npx wrangler deploy --config dist/server/wrangler.json
 ```
@@ -131,3 +131,5 @@ The shared clock and AI advance on connected clients' requests, approximately on
 The entrance guides managers through franchise and opponent selection. Both solo and friends rooms wait in the lobby until the host presses Start auction. Returning managers can choose Rejoin previous room. The sold-player history board shows every completed lot, its franchise and price, including unsold lots.
 
 Edit `components/entrance.tsx` for the welcome and setup screens, `app/page.tsx` for the auction and sales board, and `app/globals.css` for the colorful glass styling.
+
+Mobile uses a fixed bidding dock with the current player, countdown, purse, and Bid/Pass controls. Each room has ten playing seats. Audience guests enter through Join as audience or a shared audience link; they cannot bid, pass, or start the auction. CSS 3D signing celebrations and record-price highlights respect reduced-motion settings. The new Worker shares the existing D1 database; old room codes remain available, but browser login sessions are specific to each website hostname.

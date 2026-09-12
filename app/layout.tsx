@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+export const viewport = {width: 'device-width', initialScale: 1, viewportFit: 'cover', themeColor: '#182541'};
+
 export const metadata: Metadata = {
-  title: "Mock Auction — The Grand Cricket Auction",
+  title: "IPL Mock Auction — The Grand Cricket Auction",
   description: "Build your dream cricket squad in a colorful fantasy IPL auction. Play with friends or challenge computer opponents.",
   other: {
     "codex-preview": "development",

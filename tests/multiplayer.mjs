@@ -28,3 +28,24 @@ const waiting=await fetch(url+'?code='+solo.code,{headers:{Cookie:soloUser.cooki
 assert.equal((await waiting.json()).phase,'lobby');
 solo=await request(soloUser,{action:'start',code:solo.code});assert.equal(solo.phase,'live');assert.ok(solo.deadline>Date.now());
 console.log('PASS: solo room waits for explicit host start; no pre-start bidding.');
+
+// Audience access is read-only and does not consume a playing seat.
+const audience={};
+const watched=await request(audience,{action:'watch',code});
+assert.equal(watched.audience,true);assert.equal(watched.host,'other');
+assert.ok(Object.values(watched.seats).every(s=>s.token===undefined&&!s.mine));
+for(const action of ['start','bid','pass'])await request(audience,{action,code,round:1,amount:250},403);
+const audienceReload=await fetch(url+'?code='+code+'&audience=1',{headers:{Cookie:audience.cookie}});
+assert.equal(audienceReload.status,200);assert.equal((await audienceReload.json()).audience,true);
+await request(audience,{action:'invented-action',code},400);
+const fullHost={};
+const full=await request(fullHost,{action:'create',name:'Capacity host',team:'CSK'});
+for(const team of ['MI','RCB','KKR','SRH','RR','DC','PBKS','GT','LSG'])await request({},{action:'join',name:team,team,code:full.code});
+const eleventh={};
+const rejected=await request(eleventh,{action:'join',name:'Eleventh',team:'CSK',code:full.code},400);
+assert.match(rejected.error,/10 playing seats/);
+const fullAudience=await request(eleventh,{action:'watch',code:full.code});
+assert.equal(Object.keys(fullAudience.seats).length,10);assert.equal(fullAudience.phase,'lobby');assert.equal(fullAudience.audience,true);
+const repeated=await request(fullHost,{action:'join',name:'Duplicate',team:'MI',code:full.code});
+assert.equal(Object.values(repeated.seats).filter(s=>s.mine).length,1);assert.equal(Object.keys(repeated.seats).length,10);
+console.log('PASS: ten-seat cap, audience in full/live rooms, audience reconnect, no audience bids/start/pass, private tokens, duplicate join safety.');

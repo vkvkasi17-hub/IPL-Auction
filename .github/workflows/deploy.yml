@@ -61,7 +61,7 @@ jobs:
         if: steps.hosting.outputs.ready == 'true'
         env:
           CF_DATABASE: ${{ vars.CLOUDFLARE_D1_DATABASE_ID }}
-        run: node scripts/prepare-deploy.mjs "$CF_DATABASE" paddle-auction
+        run: node scripts/prepare-deploy.mjs "$CF_DATABASE" ipl-mock-auction
 
       - name: Apply database migrations
         if: steps.hosting.outputs.ready == 'true'
@@ -81,4 +81,4 @@ jobs:
         if: steps.hosting.outputs.ready == 'true'
         run: |
           echo '### Website published' >> "$GITHUB_STEP_SUMMARY"
-          echo 'The paddle-auction Worker was deployed successfully. Its URL is in the Publish website step output.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'The ipl-mock-auction Worker was deployed successfully. Its URL is in the Publish website step output.' >> "$GITHUB_STEP_SUMMARY"

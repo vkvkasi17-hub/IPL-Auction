@@ -1,5 +1,5 @@
 import {readFileSync,writeFileSync} from 'node:fs';
-const [databaseId,workerName='paddle-auction']=process.argv.slice(2);
+const [databaseId,workerName='ipl-mock-auction']=process.argv.slice(2);
 if(!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(databaseId||''))throw new Error('Usage: node scripts/prepare-deploy.mjs YOUR_D1_DATABASE_ID [worker-name]');
 if(!/^[a-z][a-z0-9-]{0,62}$/.test(workerName))throw new Error('Use a lowercase Worker name containing letters, digits and hyphens.');
 const path='dist/server/wrangler.json';

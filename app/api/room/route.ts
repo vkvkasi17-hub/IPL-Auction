@@ -3,11 +3,12 @@ import {advance,bid,canBid,teams,type Game} from '@/lib/game';
 export const dynamic='force-dynamic';
 function database(){if(!env.DB)throw new Error('The auction service is unavailable. Please try again.');return env.DB}
 function token(req:Request){return req.headers.get('cookie')?.match(/(?:^|; )paddle_session=([a-f0-9-]{36})/)?.[1]||crypto.randomUUID()}
-function response(g:Game,t:string){return Response.json({...g,host:g.host===t?'you':'other',seats:Object.fromEntries(Object.entries(g.seats).map(([id,s])=>[id,{...s,token:undefined,mine:s.token===t}]))},{headers:{'Cache-Control':'no-store','Set-Cookie':`paddle_session=${t}; HttpOnly; SameSite=Lax; Path=/; Max-Age=2592000`}})}
+function response(g:Game,t:string,audience=false){return Response.json({...g,audience,host:!audience&&g.host===t?'you':'other',seats:Object.fromEntries(Object.entries(g.seats).map(([id,s])=>[id,{...s,token:undefined,mine:!audience&&s.token===t}]))},{headers:{'Cache-Control':'no-store','Set-Cookie':`paddle_session=${t}; HttpOnly; SameSite=Lax; Path=/; Max-Age=2592000`}})}
 async function handle(req:Request){try{
  const t=token(req),isPost=req.method==='POST';
  if(isPost&&req.headers.get('origin')&&req.headers.get('origin')!==new URL(req.url).origin)return Response.json({error:'Invalid request origin'},{status:403});
- const data=(isPost?await req.json():{code:new URL(req.url).searchParams.get('code'),action:'tick'}) as {action:string,code:string,team:string,name:string,solo?:boolean,round?:number,amount?:number};
+ const data=(isPost?await req.json():{code:new URL(req.url).searchParams.get('code'),action:new URL(req.url).searchParams.get('audience')==='1'?'watch':'tick'}) as {action:string,code:string,team:string,name:string,solo?:boolean,round?:number,amount?:number};
+ if(!['create','join','watch','tick','start','bid','pass'].includes(data.action))throw new Error('Unknown auction action.');
  const db=database();
  if(data.action==='create'){
    if(!teams.some(x=>x.id===data.team)||typeof data.name!=='string'||!data.name.trim())throw new Error('Enter your name and choose a team.');
@@ -22,10 +23,10 @@ async function handle(req:Request){try{
  for(let attempt=0;attempt<8;attempt++){
    const row=await db.prepare('SELECT state,version FROM rooms WHERE code=?').bind(code).first<{state:string,version:number}>();if(!row)return Response.json({error:'Room not found. Check the code and try again.'},{status:404});
    const g:Game=JSON.parse(row.state);const mine=Object.keys(g.seats).find(id=>g.seats[id].token===t);
-   if(data.action!=='join'&&!mine)return Response.json({error:'Join this room to see the auction.'},{status:403});
+   if(data.action!=='join'&&data.action!=='watch'&&!mine)return Response.json({error:'Join this room to see the auction.'},{status:403});
    advance(g,Date.now());
    if(data.action==='join'){
-     if(!mine){if(g.phase!=='lobby')throw new Error('This auction has already started.');if(!teams.some(x=>x.id===data.team)||g.seats[data.team])throw new Error('That team is already taken. Choose another team.');if(typeof data.name!=='string'||!data.name.trim())throw new Error('Enter your name.');g.seats[data.team]={name:data.name.trim().slice(0,24),token:t,bot:false,purse:12000,squad:[]}}
+     if(!mine){if(g.phase!=='lobby')throw new Error('This auction has already started. Join as audience to watch.');if(Object.keys(g.seats).length>=10)throw new Error('All 10 playing seats are filled. Join as audience to watch.');if(!teams.some(x=>x.id===data.team)||g.seats[data.team])throw new Error('That team is already taken. Choose another team.');if(typeof data.name!=='string'||!data.name.trim())throw new Error('Enter your name.');g.seats[data.team]={name:data.name.trim().slice(0,24),token:t,bot:false,purse:12000,squad:[]}}
    }else if(data.action==='start'){
      if(g.host!==t||g.phase!=='lobby')throw new Error('Only the host can start the auction.');for(const team of teams)if(!g.seats[team.id])g.seats[team.id]={name:'Computer',token:'',bot:true,purse:12000,squad:[]};g.phase='live';g.deadline=Date.now()+14000;g.nextBot=Date.now()+2500;
    }else if(data.action==='bid'){
@@ -33,7 +34,7 @@ async function handle(req:Request){try{
    }else if(data.action==='pass'){
      if(g.phase!=='live'||!mine||g.leader===mine)throw new Error('You cannot pass while holding the highest bid.');if(!g.passed.includes(mine))g.passed.push(mine);
    }
-   const updated=await db.prepare('UPDATE rooms SET state=?,version=version+1 WHERE code=? AND version=?').bind(JSON.stringify(g),code,row.version).run();if(updated.meta.changes)return response(g,t);
+   const updated=await db.prepare('UPDATE rooms SET state=?,version=version+1 WHERE code=? AND version=?').bind(JSON.stringify(g),code,row.version).run();if(updated.meta.changes)return response(g,t,data.action==='watch');
  }
  return Response.json({error:'The auction is busy. Please try your bid again.'},{status:409});
  }catch(e){return Response.json({error:e instanceof Error?e.message:'Unable to connect to the auction.'},{status:400})}}

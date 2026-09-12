@@ -1,10 +1,10 @@
 # Automatic deployment from GitHub
 
-The workflow in `.github/workflows/deploy.yml` runs on every push to `main`. It installs the locked packages, checks TypeScript, tests the auction engine, and builds the website. Once the hosting connection below is configured, it applies pending D1 migrations and publishes the `paddle-auction` Cloudflare Worker.
+The workflow in `.github/workflows/deploy.yml` runs on every push to `main`. It installs the locked packages, checks TypeScript, tests the auction engine, and builds the website. Once the hosting connection below is configured, it applies pending D1 migrations and publishes the `ipl-mock-auction` Cloudflare Worker.
 
 ## Current connection
 
-Cloudflare deployment is connected and verified. Live website: https://paddle-auction.vkvkasi17.workers.dev. GitHub stores `CLOUDFLARE_API_TOKEN` as an encrypted repository secret, plus `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_D1_DATABASE_ID` as repository variables. The database is `paddle-auction-db` (`f28d2824-a7b9-4b5a-999e-ab84e9218798`).
+Cloudflare deployment is connected and verified. Live website: https://ipl-mock-auction.vkvkasi17.workers.dev. GitHub stores `CLOUDFLARE_API_TOKEN` as an encrypted repository secret, plus `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_D1_DATABASE_ID` as repository variables. The database is `paddle-auction-db` (`f28d2824-a7b9-4b5a-999e-ab84e9218798`).
 
 If any setting is removed, runs report **Deployment not configured** and do not publish. A green source-check run alone does not mean a website was deployed.
 

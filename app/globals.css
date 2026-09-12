@@ -68,3 +68,82 @@ body{background-image:radial-gradient(ellipse at 0% 5%,#256ddaaf,transparent 47%
 .app-shell{position:relative;isolation:isolate}.hall-ambient{position:fixed;inset:80px 0 0;z-index:-1;margin:0;border:0;border-radius:0;pointer-events:none;opacity:.3;background:transparent;box-shadow:none}.hall-ambient .hall-viewport{height:100%}.hall-ambient .hall-stage,.hall-ambient .hall-back-wall,.hall-ambient .hall-ceiling{display:none}.hall-ambient .hall-floor{top:30%;height:100vh}.hall-ambient .hall-delegations{bottom:7%;transform:scale(1.7);opacity:.5}.hall-ambient .hall-beam{height:100%;width:45%}.hall-ambient .hall-vignette{display:none}
 @media(max-width:800px){.hall-ambient{display:none}}
 .app-shell:has(main .hall-paused) .hall-ambient *{animation-play-state:paused!important}.app-shell:has(main .hall-collapsed) .hall-ambient{display:none}
+
+/* Compact, independent navigation groups on every screen. */
+.app-shell .topbar{background:none;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;border-radius:0;padding:0;min-height:0;height:auto;gap:12px;margin:12px 24px;flex-wrap:nowrap}
+.app-shell .topbar .brand{padding:10px 14px;border:1px solid #b6d7ff40;border-radius:17px;background:linear-gradient(120deg,#23557ba8,#55336ea8);font-size:20px;white-space:nowrap}
+.app-shell .topbar .brand small{display:none}
+.app-shell .topbar nav{background:linear-gradient(120deg,#254d73bb,#4a3564bb);border:1px solid #bfdcff40;border-radius:16px;padding:5px 8px;gap:3px;width:auto;order:0;height:auto;margin:0}
+.app-shell .topbar nav button{font-size:12px;padding:8px 11px;height:36px}
+.app-shell .topbar .local-clock{flex-shrink:0;margin:0}
+.recent-sales{padding:17px}
+.recent-sales .panel-heading{margin-bottom:12px}
+.recent-sales .panel-heading h2{font-size:15px}
+.recent-sales .panel-heading>span{font-size:9px}
+.recent-sales-list{max-height:210px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.recent-sales-list>p{font-size:12px;line-height:1.7;padding:8px 0}
+.recent-sale{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px solid #d9e6ff17}
+.recent-sale:first-child{border-top:0}
+.recent-sale b{display:block;font-size:12px}.recent-sale small{display:block;font-size:10px;margin-top:4px}.recent-sale>strong{white-space:nowrap;font-size:12px;color:#cfff99}
+@media(min-width:801px){
+ .app-shell main{padding:0 24px 130px;max-width:1600px;margin:auto}
+ .app-shell main>.auction-hall{margin:0 0 10px;border-radius:16px}
+ .app-shell main>.auction-hall .hall-viewport{height:145px}
+ .app-shell main>.auction-hall .hall-world{width:100%;height:300px;transform:scale(.5);transform-origin:center top;animation:none}
+ .app-shell main>.hall-collapsed .hall-viewport{height:0}
+ .app-shell .page-heading{margin:12px 0 16px;align-items:center;gap:15px}
+ .app-shell .page-heading h1{font-size:25px;margin:5px 0}
+ .app-shell .page-heading p{display:none}
+ .app-shell .page-heading .eyebrow{font-size:9px}
+ .app-shell .auction-layout{display:grid;grid-template-columns:210px minmax(300px,1fr) 270px;gap:16px;align-items:start}
+ .app-shell .franchises{grid-column:auto;grid-row:auto}
+ .app-shell .team-list{display:block}
+ .app-shell .team-row{padding:10px 9px;gap:8px;min-height:0}
+ .app-shell .team-info b{font-size:11px}.app-shell .team-info small{font-size:10px}
+ .app-shell .team-badge{width:33px;height:33px;font-size:11px;flex-shrink:0}
+ .app-shell .team-budget{font-size:12px}.app-shell .franchises .panel-heading{padding:15px 12px}
+ .app-shell .franchises .panel-heading h2{font-size:13px}
+ .app-shell .franchises .panel-heading>span{font-size:8px}
+ .app-shell .stage-top{padding:15px 20px}.app-shell .player-identity{padding:18px 22px;gap:20px}
+ .app-shell .player-identity h2{font-size:32px;line-height:1.1}
+ .app-shell .player-monogram{width:88px;height:102px;flex-shrink:0}.app-shell .player-monogram>span{font-size:32px}
+ .app-shell .player-facts{padding:14px 20px}.app-shell .player-facts small{font-size:8px}.app-shell .player-facts b{font-size:11px}
+ .app-shell .bidding-zone{padding:18px 22px}.app-shell .bid-price{font-size:48px}.app-shell .leading{font-size:12px}
+ .app-shell .countdown{width:75px;height:93px}.app-shell .countdown strong{font-size:30px}
+ .app-shell .right-rail{gap:14px;display:flex;flex-direction:column}
+ .app-shell .controls{padding:17px}.app-shell .dugout-title{margin:12px 0}.app-shell .dugout-title h2{font-size:15px}
+ .app-shell .purse{margin:13px 0}.app-shell .purse strong{font-size:29px}.app-shell .purse small{font-size:10px}
+ .app-shell .squad-counts{margin:12px 0;gap:20px}.app-shell .squad-counts strong{font-size:23px}.app-shell .squad-counts span{font-size:11px}
+ .app-shell .controls>.bid-button,.app-shell .controls>.pass-button{display:none}
+ .app-shell .view-squad{height:30px;font-size:11px}.app-shell .activity{display:none}
+ .app-shell .mobile-auction-dock{display:flex;align-items:center;gap:25px;position:fixed;bottom:12px;left:50%;right:auto;transform:translateX(-50%);width:min(930px,calc(100% - 48px));padding:12px 18px;background:linear-gradient(115deg,#204869f7,#50315ff7);border:1px solid #c2dcff7a;border-radius:21px;box-shadow:0 8px 40px #050b2580;backdrop-filter:blur(18px);z-index:40}
+ .app-shell .dock-status{display:flex;align-items:center;justify-content:space-between;flex:1;gap:22px;margin:0;min-width:0}
+ .app-shell .dock-status>span:first-child{min-width:0}.app-shell .dock-status b{display:block;font-size:15px}.app-shell .dock-status small{display:block;font-size:10px;color:#c5d5ec;margin-top:4px}
+ .app-shell .dock-status>span:last-child{text-align:right;white-space:nowrap}
+ .app-shell .dock-actions{display:flex;gap:9px;flex:1}.app-shell .dock-actions>.primary-button{flex:1}
+ .app-shell .mobile-auction-dock .primary-button{height:49px;font-size:14px;border-radius:13px;justify-content:center;padding:0 18px;white-space:nowrap}
+ .app-shell .dock-pass{height:49px;border-radius:13px;padding:0 17px}.app-shell .dock-error{position:absolute;bottom:100%;left:0;right:0;padding:10px;background:#692c48;border-radius:12px}
+ .app-shell .sales-board{margin-top:22px}
+}
+@media(min-width:801px) and (max-width:1100px){
+ .app-shell .topbar{margin:10px 16px;gap:8px}.app-shell .topbar .brand{font-size:16px;padding:9px}.app-shell .topbar .brand-icon{width:27px;height:27px;margin-right:7px}.app-shell .topbar nav button{font-size:11px;padding:7px}.app-shell .local-clock time{font-size:11px}
+ .app-shell main{padding-left:16px;padding-right:16px}.app-shell .auction-layout{grid-template-columns:minmax(0,1fr) 270px}
+ .app-shell .franchises{grid-column:1/-1;grid-row:2}.app-shell .team-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}.app-shell .team-budget{display:none}
+}
+@media(max-width:800px){
+ .app-shell .topbar{margin:8px 12px;flex-wrap:wrap;gap:7px}.app-shell .topbar .brand{font-size:17px;padding:7px 9px}.app-shell .topbar nav{order:3;width:auto;max-width:100%;height:auto;padding:3px 4px;overflow-x:auto}.app-shell .topbar nav button{font-size:10px;padding:5px 8px;height:30px}.app-shell .topbar .local-clock{margin-left:auto}
+ .recent-sales{padding:16px}.recent-sales-list{max-height:190px}
+}
+@media(min-width:801px){
+ .app-shell main>.auction-hall .hall-viewport{height:100px}
+ .app-shell main>.auction-hall .hall-world{transform:scale(.34);height:300px}
+ .app-shell main>.hall-collapsed .hall-viewport{height:0}
+ .app-shell .player-identity{padding:10px 22px;min-height:0}
+ .app-shell .player-identity h2{font-size:29px;margin:5px 0 10px}
+ .app-shell .player-facts{display:none}
+ .app-shell .stage-top{padding:12px 20px}
+ .app-shell .recent-sales{order:-1}
+ .app-shell .recent-sales-list{max-height:160px}
+ .app-shell .bidding-zone{padding:14px 22px}
+ .app-shell .controls .purse-track{margin-top:10px}
+}

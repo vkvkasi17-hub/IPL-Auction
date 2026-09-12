@@ -122,7 +122,7 @@ npm run build
 
 ## Format and limitations
 
-This first version is a 60-player fantasy quick auction, with illustrative base prices and a ₹120 Cr purse. It enforces the 25-player and 8-overseas maximums. It does not implement season retentions, Right to Match, accelerated auctions or the official 18-player minimum. It is not an official IPL product or an exact recreation of a particular season. AI bidding is heuristic. There is no monetary payment or wagering.
+This version is a 421-player fantasy auction, with illustrative base prices and a ₹120 Cr purse. It enforces the 25-player and 8-overseas maximums. It does not implement season retentions, Right to Match, accelerated auctions or the official 18-player minimum. It is not an official IPL product or an exact recreation of a particular season. AI bidding is heuristic. There is no monetary payment or wagering.
 
 The shared clock and AI advance on connected clients' requests, approximately once per second. When everyone disconnects, the current expired lot settles at reconnect and subsequent rounds resume; it is not a background autonomous auction scheduler. Authentication uses device sessions, with no cross-device account recovery. Each franchise needs a separate browser profile/device. For broader production use, add room lifecycle expiry, rate limiting, abuse protection and full account recovery.
 
@@ -137,3 +137,5 @@ Mobile uses a fixed bidding dock with the current player, countdown, purse, and 
 Reload restores the active room using its URL and session cookie. Home is an explicit navigation action and retains Return to room, including audience rooms. The room-code button copies only the eight-character code; Invite audience copies a watch link. Highest-price highlights appear only after a confirmed record sale. The free workers.dev address requires a separately registered custom domain to replace it.
 
 The auction hall uses lightweight CSS 3D scenery with an auctioneer, ten seated delegations, moving lights, a board synchronized to the current player, and a raised paddle for the leading franchise. It can be paused or collapsed; reduced-motion settings are respected. The menu clock displays the visitor’s device-local time and date. Home includes a no-bid hall demo and a ten-team explorer. Edit `components/auction-hall.tsx` and `components/local-clock.tsx` for these features.
+
+Player data provenance and stable ID rules: [PLAYER_DATA.md](PLAYER_DATA.md). Desktop has compact navigation, a persistent bid dock, and a scrollable sold-player rail; the mobile dock remains available while scrolling.

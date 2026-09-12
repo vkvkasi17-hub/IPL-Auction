@@ -8,7 +8,7 @@ for(let now=3000;now<100000000&&g.phase!=='finished';now+=2000)advance(g,now);
 assert.equal(g.phase,'finished');const won=[];for(const s of Object.values(g.seats)){assert.ok(s.purse>=0);assert.ok(s.squad.length<=25);assert.ok(s.squad.filter(x=>players[x.player].country!=='India').length<=8);assert.equal(s.purse+s.squad.reduce((n,x)=>n+x.price,0),12000);won.push(...s.squad.map(x=>x.player))}assert.equal(new Set(won).size,won.length);assert.ok(won.length>0);
 const last=structuredClone(g);advance(g,99999999);assert.deepEqual(g,last);
 const constrained={...g,phase:'live',index:2,leader:null,price:0,passed:[]};constrained.seats.CSK.purse=0;assert.equal(canBid(constrained,'CSK'),false);constrained.seats.CSK.purse=12000;constrained.seats.CSK.squad=Array(8).fill({player:2,price:200});assert.equal(canBid(constrained,'CSK'),false);
-console.log('PASS: complete 60-player AI auction, no duplicate awards, exact purse accounting, squad caps, overseas caps, unaffordable bid rejection, stable completion.');
+console.log('PASS: complete expanded AI auction, no duplicate awards, exact purse accounting, squad caps, overseas caps, unaffordable bid rejection, stable completion.');
 
 const lobby={...structuredClone(g),phase:'lobby',deadline:0,nextBot:0,index:0};const untouched=structuredClone(lobby);advance(lobby,999999999);assert.deepEqual(lobby,untouched);console.log('PASS: lobby never advances timers or computer bids.');
 
@@ -19,3 +19,5 @@ record.seats.CSK.squad.push({player:1,price:500});assert.equal(isRecordSale(reco
 record.seats.CSK.squad[1].price=200;assert.equal(isRecordSale(record),false,'ties do not beat record');
 record.phase='finished';assert.equal(isRecordSale(record),false);
 console.log('PASS: record banner only for confirmed sold award above previous sales, never live bids or ties.');
+
+assert.ok(players.length>300);assert.equal(new Set(players.map(p=>p.name.toLowerCase().replace(/[^a-z]/g,''))).size,players.length);players.forEach((p,i)=>{assert.equal(p.id,i);assert.ok(['BAT','BOWL','WK','AR'].includes(p.role));assert.ok(p.country);assert.ok(p.base>0)});assert.equal(players[0].name,'Rishabh Pant');assert.equal(players[59].name,'Prithvi Shaw');console.log(`PASS: ${players.length} unique players, valid roles and stable legacy IDs.`);

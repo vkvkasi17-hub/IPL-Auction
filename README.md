@@ -2,7 +2,7 @@
 
 [Play the live website](https://paddle-ipl-auction-arena.kasivinay3.chatgpt.site) · [GitHub repository](https://github.com/vkvkasi17-hub/IPL-Auction)
 
-The live website is hosted separately on Sites. GitHub stores this source; pushing changes does not automatically redeploy the live website.
+The existing live website is hosted separately on Sites. A GitHub Actions deployment workflow is included for your own Cloudflare account; it requires a one-time connection before pushes publish to the new Cloudflare URL. See [DEPLOYMENT.md](DEPLOYMENT.md).
 
 Open this entire folder in VS Code. This is a multi-file project, not a single HTML snippet. No Codex or Sites account is required to edit or run the exported code. The original hosted Site ID, Git history, installed dependencies, database records and credentials are excluded.
 

@@ -1,0 +1,84 @@
+name: Check and deploy auction website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: auction-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Check TypeScript
+        run: npx --no-install tsc --noEmit
+
+      - name: Test auction engine
+        run: node tests/engine.mjs
+
+      - name: Build website
+        run: npm run build
+
+      - name: Check hosting connection
+        id: hosting
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CF_DATABASE: ${{ vars.CLOUDFLARE_D1_DATABASE_ID }}
+        shell: bash
+        run: |
+          if [[ -n "$CF_TOKEN" && -n "$CF_ACCOUNT" && -n "$CF_DATABASE" ]]; then
+            echo 'ready=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'ready=false' >> "$GITHUB_OUTPUT"
+            echo '::warning::Build passed, but no website was deployed. Complete the Cloudflare connection described in DEPLOYMENT.md.'
+            echo '### Deployment not configured' >> "$GITHUB_STEP_SUMMARY"
+            echo 'Source checks completed. No website was published. Add the Cloudflare API token secret and account/database variables listed in DEPLOYMENT.md, then rerun this workflow.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Configure deployment
+        if: steps.hosting.outputs.ready == 'true'
+        env:
+          CF_DATABASE: ${{ vars.CLOUDFLARE_D1_DATABASE_ID }}
+        run: node scripts/prepare-deploy.mjs "$CF_DATABASE" paddle-auction
+
+      - name: Apply database migrations
+        if: steps.hosting.outputs.ready == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx --no-install wrangler d1 migrations apply DB --remote --config dist/server/wrangler.json
+
+      - name: Publish website
+        if: steps.hosting.outputs.ready == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx --no-install wrangler deploy --config dist/server/wrangler.json
+
+      - name: Report successful publication
+        if: steps.hosting.outputs.ready == 'true'
+        run: |
+          echo '### Website published' >> "$GITHUB_STEP_SUMMARY"
+          echo 'The paddle-auction Worker was deployed successfully. Its URL is in the Publish website step output.' >> "$GITHUB_STEP_SUMMARY"

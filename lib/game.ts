@@ -371,9 +371,9 @@ const names = [
  ["Sai Sudharsan","BAT","India"],
 ];
 // Curated fantasy marquee set: original marquee names plus retained stars and recent IPL leaders.
-export const marqueeNames=new Set([...names.slice(0,18).map(p=>p[0]),...names.slice(60,85).map(p=>p[0]),'Bhuvneshwar Kumar','Jofra Archer','Prasidh Krishna','Vaibhav Sooryavanshi','Kagiso Rabada','Sai Sudharsan']);
+export const marqueeNames=new Set([...names.slice(60,85).map(p=>p[0]),'Vaibhav Sooryavanshi','Kagiso Rabada','Sai Sudharsan','Bhuvneshwar Kumar','Jofra Archer','Prasidh Krishna',...names.slice(0,18).map(p=>p[0])]);
 export const players = names.map(([name,role,country],id)=>({id,name,role,country,marquee:marqueeNames.has(name),base:marqueeNames.has(name)?200:id<40?100:30,value:marqueeNames.has(name)?1100+(id*173)%900:200+(id*139)%700}));
-export const createAuctionOrder=()=>[...players.filter(p=>p.marquee),...players.filter(p=>!p.marquee)].map(p=>p.id);
+export const createAuctionOrder=()=>[...marqueeNames].map(name=>players.find(p=>p.name===name)!.id).concat(players.filter(p=>!p.marquee).map(p=>p.id));
 export const auctionPlayers=(g:Game)=>(g.order||players.map(p=>p.id)).map(id=>players[id]);
 export const currentPlayer=(g:Game)=>players[g.order?.[g.index]??g.index];
 export const lotOf=(g:Game,id:number)=>g.order?g.order.indexOf(id):id;

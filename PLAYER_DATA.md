@@ -24,3 +24,5 @@ The 49-player ₹2 crore marquee set is curated for this fantasy game, not an of
 New rooms persist an explicit player order, with the marquee set first. Existing rooms without an order retain the old sequence; player IDs and saved squads never change. The marquee flags/base prices update globally, as do the new increments.
 
 Increments use the current bid: below ₹1 crore +₹10 lakh; ₹1 crore to below ₹5 crore +₹20 lakh; ₹5 crore to below ₹10 crore +₹25 lakh; ₹10 crore onward +₹30 lakh. At a boundary the higher bracket applies; crossing a boundary does not round or clip the increment. Opening bids use the player's base price. Client and server share `nextPrice`.
+
+Marquee display priority: Virat Kohli through Ravindra Jadeja lead the list, followed by the remaining added stars and the original marquee group. New room orders follow this priority. The pool dialog always shows this priority, including in existing rooms, while their live lot order and outcomes remain unchanged.

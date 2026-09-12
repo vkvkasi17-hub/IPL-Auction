@@ -7,12 +7,12 @@ const g={order:createAuctionOrder(),code:'TEST',host:'x',phase:'live',seats:Obje
 for(let now=3000;now<100000000&&g.phase!=='finished';now+=2000)advance(g,now);
 assert.equal(g.phase,'finished');const won=[];for(const s of Object.values(g.seats)){assert.ok(s.purse>=0);assert.ok(s.squad.length<=25);assert.ok(s.squad.filter(x=>players[x.player].country!=='India').length<=8);assert.equal(s.purse+s.squad.reduce((n,x)=>n+x.price,0),12000);won.push(...s.squad.map(x=>x.player))}assert.equal(new Set(won).size,won.length);assert.ok(won.length>0);
 const last=structuredClone(g);advance(g,99999999);assert.deepEqual(g,last);
-const constrained={...g,phase:'live',index:2,leader:null,price:0,passed:[]};constrained.seats.CSK.purse=0;assert.equal(canBid(constrained,'CSK'),false);constrained.seats.CSK.purse=12000;constrained.seats.CSK.squad=Array(8).fill({player:2,price:200});assert.equal(canBid(constrained,'CSK'),false);
+const constrained={...g,order:undefined,phase:'live',index:2,leader:null,price:0,passed:[]};constrained.seats.CSK.purse=0;assert.equal(canBid(constrained,'CSK'),false);constrained.seats.CSK.purse=12000;constrained.seats.CSK.squad=Array(8).fill({player:2,price:200});assert.equal(canBid(constrained,'CSK'),false);
 console.log('PASS: complete expanded AI auction, no duplicate awards, exact purse accounting, squad caps, overseas caps, unaffordable bid rejection, stable completion.');
 
 const lobby={...structuredClone(g),phase:'lobby',deadline:0,nextBot:0,index:0};const untouched=structuredClone(lobby);advance(lobby,999999999);assert.deepEqual(lobby,untouched);console.log('PASS: lobby never advances timers or computer bids.');
 
-const record={...structuredClone(g),index:1,phase:'live',leader:'CSK',price:500,seats:{CSK:{name:'Host',token:'x',bot:false,purse:11000,squad:[{player:0,price:200}]}}};
+const record={...structuredClone(g),order:undefined,index:1,phase:'live',leader:'CSK',price:500,seats:{CSK:{name:'Host',token:'x',bot:false,purse:11000,squad:[{player:0,price:200}]}}};
 assert.equal(isRecordSale(record),false,'live prices must never announce a record');
 record.phase='sold';assert.equal(isRecordSale(record),false,'sale must be awarded');
 record.seats.CSK.squad.push({player:1,price:500});assert.equal(isRecordSale(record),true);
@@ -33,7 +33,7 @@ assert.equal(auctionResults({...outcomeGame,phase:'finished',index:60}).length,6
 
 for(const [price,increment] of [[10,10],[90,10],[99,10],[100,20],[480,20],[499,20],[500,25],[975,25],[999,25],[1000,30],[2000,30]])assert.equal(bidIncrement(price),increment);
 const order=createAuctionOrder();assert.equal(order.length,players.length);assert.equal(new Set(order).size,players.length);
-const marquee=players.filter(p=>p.marquee);assert.deepEqual(order.slice(0,marquee.length),marquee.map(p=>p.id));assert.ok(marquee.every(p=>p.base===200));
+const marquee=players.filter(p=>p.marquee);assert.deepEqual(new Set(order.slice(0,marquee.length)),new Set(marquee.map(p=>p.id)));assert.deepEqual(order.slice(0,17),players.slice(60,77).map(p=>p.id));assert.equal(players[order[0]].name,'Virat Kohli');assert.equal(players[order[16]].name,'Ravindra Jadeja');assert.ok(marquee.every(p=>p.base===200));
 for(const name of ['Virat Kohli','Rohit Sharma','Jasprit Bumrah','Vaibhav Sooryavanshi','Kagiso Rabada','Sai Sudharsan'])assert.ok(marquee.some(p=>p.name===name));
 const reordered={...structuredClone(g),order:[60,0],index:0,phase:'live',leader:null,price:0,deadline:100,nextBot:999999,seats:{CSK:{name:'Host',token:'x',bot:false,purse:12000,squad:[]}},passed:[]};
 assert.equal(currentPlayer(reordered).name,'Virat Kohli');assert.equal(nextPrice(reordered),200);bid(reordered,'CSK',0);advance(reordered,10001);assert.equal(reordered.seats.CSK.squad[0].player,60);

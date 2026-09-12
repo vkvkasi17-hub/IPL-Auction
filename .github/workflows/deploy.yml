@@ -37,6 +37,11 @@ jobs:
       - name: Test auction engine
         run: node tests/engine.mjs
 
+      - name: Test owner authentication
+        run: |
+          node tests/owner-auth.mjs
+          node tests/owner-route.mjs
+
       - name: Build website
         run: npm run build
 

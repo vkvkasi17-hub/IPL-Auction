@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {createHash,randomBytes} from 'node:crypto';
+import {readFileSync} from 'node:fs';
+import {transformSync} from 'esbuild';
+const js=transformSync(readFileSync('lib/owner-auth.ts','utf8'),{loader:'ts',format:'esm'}).code;
+const {keyMatches,ownerSession,validOwnerSession,OWNER_TTL}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
+const key=randomBytes(32).toString('base64url'),hash=createHash('sha256').update(key).digest('hex'),now=Date.now();
+assert.equal(keyMatches(key,hash),true);assert.equal(keyMatches('wrong',hash),false);assert.equal(keyMatches(key,''),false);
+const session=ownerSession(hash,now);assert.equal(validOwnerSession(session,hash,now),true);assert.equal(validOwnerSession(session,hash,now+OWNER_TTL*1000+1),false);assert.equal(validOwnerSession(session,'f'.repeat(64),now),false);assert.equal(validOwnerSession('1234567890.bad',hash,now),false);assert.equal(validOwnerSession(session+'x',hash,now),false);assert.equal(validOwnerSession(session,'',now),false);
+const [expiry,sig]=session.split('.');assert.equal(validOwnerSession(String(Number(expiry)+60)+'.'+sig,hash,now),false);
+console.log('PASS: owner key verification, signed session, expiry, forged/tampered cookies and unconfigured access fail closed.');

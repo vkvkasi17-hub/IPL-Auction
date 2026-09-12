@@ -1,5 +1,9 @@
 # Paddle — IPL Auction Arena: your source code
 
+[Play the live website](https://paddle-ipl-auction-arena.kasivinay3.chatgpt.site) · [GitHub repository](https://github.com/vkvkasi17-hub/IPL-Auction)
+
+The live website is hosted separately on Sites. GitHub stores this source; pushing changes does not automatically redeploy the live website.
+
 Open this entire folder in VS Code. This is a multi-file project, not a single HTML snippet. No Codex or Sites account is required to edit or run the exported code. The original hosted Site ID, Git history, installed dependencies, database records and credentials are excluded.
 
 ## 1. Run in VS Code
@@ -40,15 +44,13 @@ If changing bidding rules, update the server validation in `app/api/room/route.t
 
 ## 3. Push to your GitHub repository
 
-Create an empty repository on GitHub without an initial README, then replace YOUR_USERNAME and YOUR_REPOSITORY:
+Your repository is already created at https://github.com/vkvkasi17-hub/IPL-Auction, and this local project is connected to it. Its default remote branch is `main`.
+
+To download the project on another computer:
 
 ```sh
-git init
-git add .
-git commit -m "Initial IPL auction game"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-git push -u origin main
+git clone https://github.com/vkvkasi17-hub/IPL-Auction.git
+cd IPL-Auction
 ```
 
 For later edits:

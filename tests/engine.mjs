@@ -9,3 +9,5 @@ assert.equal(g.phase,'finished');const won=[];for(const s of Object.values(g.sea
 const last=structuredClone(g);advance(g,99999999);assert.deepEqual(g,last);
 const constrained={...g,phase:'live',index:2,leader:null,price:0,passed:[]};constrained.seats.CSK.purse=0;assert.equal(canBid(constrained,'CSK'),false);constrained.seats.CSK.purse=12000;constrained.seats.CSK.squad=Array(8).fill({player:2,price:200});assert.equal(canBid(constrained,'CSK'),false);
 console.log('PASS: complete 60-player AI auction, no duplicate awards, exact purse accounting, squad caps, overseas caps, unaffordable bid rejection, stable completion.');
+
+const lobby={...structuredClone(g),phase:'lobby',deadline:0,nextBot:0,index:0};const untouched=structuredClone(lobby);advance(lobby,999999999);assert.deepEqual(lobby,untouched);console.log('PASS: lobby never advances timers or computer bids.');

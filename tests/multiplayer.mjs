@@ -19,3 +19,12 @@ await request(users[0],{action:'bid',code,round:1,amount:250},400);
 await request(users[2],{action:'join',code,team:'RCB',name:'Late'},400);
 const reload=await fetch(url+'?code='+code,{headers:{Cookie:users[1].cookie}});assert.equal((await reload.json()).seats.MI.mine,true);
 console.log('PASS: independent players, exclusive teams, host authority, private sessions, stale bid rejection, budget-backed bidding, pass and reconnect.');
+
+const soloUser={};
+let solo=await request(soloUser,{action:'create',team:'RCB',name:'Solo host',solo:true});
+assert.equal(solo.phase,'lobby');assert.equal(solo.deadline,0);assert.equal(Object.values(solo.seats).filter(s=>s.bot).length,9);
+await request(soloUser,{action:'bid',code:solo.code,round:1,amount:200},400);
+const waiting=await fetch(url+'?code='+solo.code,{headers:{Cookie:soloUser.cookie}});
+assert.equal((await waiting.json()).phase,'lobby');
+solo=await request(soloUser,{action:'start',code:solo.code});assert.equal(solo.phase,'live');assert.ok(solo.deadline>Date.now());
+console.log('PASS: solo room waits for explicit host start; no pre-start bidding.');

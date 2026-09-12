@@ -14,7 +14,7 @@ async function handle(req:Request){try{
    const code=crypto.randomUUID().replaceAll('-','').slice(0,8).toUpperCase();
    const g:Game={code,host:t,phase:'lobby',seats:{},index:0,price:0,leader:null,deadline:0,nextBot:0,passed:[],log:['Auction room created. Welcome to the table.'],round:1};
    g.seats[data.team]={name:data.name.trim().slice(0,24),token:t,bot:false,purse:12000,squad:[]};
-   if(data.solo){for(const team of teams)if(!g.seats[team.id])g.seats[team.id]={name:'Computer',token:'',bot:true,purse:12000,squad:[]};g.phase='live';g.deadline=Date.now()+14000;g.nextBot=Date.now()+3500}
+   if(data.solo){for(const team of teams)if(!g.seats[team.id])g.seats[team.id]={name:'Computer',token:'',bot:true,purse:12000,squad:[]}}
    await db.prepare('INSERT INTO rooms (code,state,version) VALUES (?,?,0)').bind(code,JSON.stringify(g)).run();return response(g,t);
  }
  const code=String(data.code||'').trim().toUpperCase();

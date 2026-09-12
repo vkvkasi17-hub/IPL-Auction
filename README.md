@@ -1,8 +1,8 @@
 # Paddle — IPL Auction Arena: your source code
 
-[Play the live website](https://paddle-ipl-auction-arena.kasivinay3.chatgpt.site) · [GitHub repository](https://github.com/vkvkasi17-hub/IPL-Auction)
+[Play the live website](https://paddle-auction.vkvkasi17.workers.dev) · [GitHub repository](https://github.com/vkvkasi17-hub/IPL-Auction)
 
-The existing live website is hosted separately on Sites. A GitHub Actions deployment workflow is included for your own Cloudflare account; it requires a one-time connection before pushes publish to the new Cloudflare URL. See [DEPLOYMENT.md](DEPLOYMENT.md).
+Automatic Cloudflare deployment is connected. Push to `main` to run checks, apply database migrations, and publish updates to the live website. See [DEPLOYMENT.md](DEPLOYMENT.md). The earlier Sites demo is hosted separately and is not updated by GitHub pushes.
 
 Open this entire folder in VS Code. This is a multi-file project, not a single HTML snippet. No Codex or Sites account is required to edit or run the exported code. The original hosted Site ID, Git history, installed dependencies, database records and credentials are excluded.
 
@@ -67,25 +67,24 @@ The included `.gitignore` excludes dependencies, local database files, builds an
 
 GitHub stores your code. The multiplayer backend also needs a running server and database; GitHub Pages alone cannot run this project. This implementation targets Cloudflare Workers and D1.
 
-First sign in and create a database in your own account:
+GitHub Actions is already configured for this repository. Normally, commit and push your changes; no manual deployment commands are needed. The following commands are an optional manual deployment fallback using the existing database:
 
 ```sh
 npx wrangler login
-npx wrangler d1 create paddle-auction-db
 ```
 
-Copy the `database_id` printed by the second command. Then build and configure the generated deployment using that real ID:
+Then build and configure deployment:
 
 ```sh
 npm run build
-node scripts/prepare-deploy.mjs YOUR_D1_DATABASE_ID paddle-auction
+node scripts/prepare-deploy.mjs f28d2824-a7b9-4b5a-999e-ab84e9218798 paddle-auction
 npx wrangler d1 migrations apply DB --remote --config dist/server/wrangler.json
 npx wrangler deploy --config dist/server/wrangler.json
 ```
 
-Replace YOUR_D1_DATABASE_ID with the UUID from Cloudflare, not the placeholder used for local previews. These last commands create tables in and publish to your own Cloudflare account. Open the Worker URL printed after deployment. For each subsequent release, repeat the build, prepare, migration and deploy commands. The prepare step must follow every build because the build regenerates its configuration. Pushing Git alone does not publish the app unless you configure CI/CD separately.
+These commands apply pending migrations and publish to your Cloudflare account. The prepare step must follow every manual build because the build regenerates its configuration. Keep the existing database ID to preserve auction rooms. For a different account, create a new D1 database and use its ID instead.
 
-The deployment helper was checked locally; deployment to your own account requires your Cloudflare login and database. The earlier published application was tested on the Sites-hosted Cloudflare runtime.
+The GitHub deployment and live room creation have been verified on the Cloudflare-hosted website.
 
 Official deployment references:
 - https://developers.cloudflare.com/d1/get-started/

@@ -4,15 +4,17 @@ The workflow in `.github/workflows/deploy.yml` runs on every push to `main`. It 
 
 ## Current connection
 
-The GitHub workflow is prepared. Cloudflare account access is not configured yet. Until it is configured, runs explicitly report **Deployment not configured** and do not publish. A green source-check run alone does not mean a website was deployed.
+Cloudflare deployment is connected and verified. Live website: https://paddle-auction.vkvkasi17.workers.dev. GitHub stores `CLOUDFLARE_API_TOKEN` as an encrypted repository secret, plus `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_D1_DATABASE_ID` as repository variables. The database is `paddle-auction-db` (`f28d2824-a7b9-4b5a-999e-ab84e9218798`).
+
+If any setting is removed, runs report **Deployment not configured** and do not publish. A green source-check run alone does not mean a website was deployed.
 
 The existing public demo at https://paddle-ipl-auction-arena.kasivinay3.chatgpt.site is hosted by Sites. This workflow creates a separate Worker in your own Cloudflare account, using its own URL and database. It does not update the existing Sites URL or move existing auction rooms. Keep the database ID unchanged between deployments to preserve rooms on the new website.
 
-## One-time connection
+## Reconnecting or setting up another account
 
 1. Sign in to your Cloudflare account at https://dash.cloudflare.com/.
 2. Create a D1 database named `paddle-auction-db`. Record its database ID and the account ID.
-3. Create a Cloudflare API token scoped to this account with Workers Scripts Edit and D1 Edit permissions. Add Workers Subdomain Read if required for publishing to the account's workers.dev address. Keep the token private.
+3. Open Workers & Pages once to initialize the account's `workers.dev` subdomain. Create a Cloudflare API token scoped to this account with Workers Scripts Edit and D1 Edit permissions. Keep the token private.
 4. In https://github.com/vkvkasi17-hub/IPL-Auction/settings/secrets/actions add the repository secret `CLOUDFLARE_API_TOKEN`. Paste the token into GitHub's secret field; never put it in code, the README, or chat.
 5. In the Variables tab on that same settings page, add `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_D1_DATABASE_ID` as repository variables with the IDs from step 2.
 6. Open https://github.com/vkvkasi17-hub/IPL-Auction/actions and run **Check and deploy auction website** on `main`, or push a new commit.
@@ -30,6 +32,6 @@ git commit -m "Update auction website"
 git push
 ```
 
-Watch the run in GitHub Actions. Once Cloudflare is connected, successful pushes update the new Cloudflare-hosted URL automatically.
+Watch the run in GitHub Actions. Successful pushes update the Cloudflare-hosted URL automatically.
 
 Official reference: https://developers.cloudflare.com/workers/ci-cd/external-cicd/github-actions/

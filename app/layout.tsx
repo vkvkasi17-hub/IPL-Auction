@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import {SiteEffects} from "@/components/site-effects";
 
 export const viewport = {width: 'device-width', initialScale: 1, viewportFit: 'cover', themeColor: '#182541'};
 
@@ -22,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body id="site-content" className="antialiased">{children}<SiteEffects/></body>
     </html>
   );
 }

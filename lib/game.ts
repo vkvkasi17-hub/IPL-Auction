@@ -381,11 +381,16 @@ export const bidIncrement=(price:number)=>price<100?10:price<500?20:price<1000?2
 
 export const money = (n:number)=>`₹${(n/100).toFixed(2)} Cr`;
 export type Seat = {name:string,token:string,bot:boolean,purse:number,squad:{player:number,price:number}[]};
-export type Game = {order?:number[];code:string,host:string,phase:'lobby'|'live'|'sold'|'finished',seats:Record<string,Seat>,index:number,price:number,leader:string|null,deadline:number,nextBot:number,passed:string[],log:string[],round:number};
+export type Game = {lastActivity?:number;closed?:boolean;paused?:{remaining:number,botRemaining:number};order?:number[];code:string,host:string,phase:'lobby'|'live'|'sold'|'finished',seats:Record<string,Seat>,index:number,price:number,leader:string|null,deadline:number,nextBot:number,passed:string[],log:string[],round:number};
 export const nextPrice=(g:Game)=>g.leader?g.price+bidIncrement(g.price):currentPlayer(g)?.base||30;
-export function canBid(g:Game,id:string){const s=g.seats[id],p=currentPlayer(g);return !!s&&!!p&&s.purse>=nextPrice(g)&&s.squad.length<25&&(p.country==='India'||s.squad.filter(x=>players[x.player].country!=='India').length<8)&&g.leader!==id&&!g.passed.includes(id)}
+export function canBid(g:Game,id:string){const s=g.seats[id],p=currentPlayer(g);return !g.paused&&!g.closed&&!!s&&!!p&&s.purse>=nextPrice(g)&&s.squad.length<25&&(p.country==='India'||s.squad.filter(x=>players[x.player].country!=='India').length<8)&&g.leader!==id&&!g.passed.includes(id)}
 export function bid(g:Game,id:string,now:number){g.price=nextPrice(g);g.leader=id;g.deadline=now+10000;g.nextBot=now+1800+Math.random()*1800;g.log.unshift(`${id} bid ${money(g.price)} for ${currentPlayer(g).name}`);g.log=g.log.slice(0,40)}
+export const ROOM_IDLE_MS=10*60*1000;
+export function expireRoom(g:Game,now:number){if(!g.closed&&!g.paused&&g.phase!=='finished'&&g.lastActivity!==undefined&&now-g.lastActivity>=ROOM_IDLE_MS){g.closed=true;g.round++;g.log.unshift('Room closed after 10 minutes without interaction.')}return !!g.closed}
+export function pauseRoom(g:Game,now:number){if(g.closed||g.paused||!['live','sold'].includes(g.phase))throw new Error('This auction cannot be paused.');g.paused={remaining:Math.max(0,g.deadline-now),botRemaining:Math.max(0,g.nextBot-now)};g.round++;g.log.unshift('Host paused the auction. Your room is saved.');}
+export function resumeRoom(g:Game,now:number){if(g.closed||!g.paused)throw new Error('This auction is not paused.');g.deadline=now+g.paused.remaining;g.nextBot=now+g.paused.botRemaining;delete g.paused;g.lastActivity=now;g.round++;g.log.unshift('Host resumed the auction.');}
 export function advance(g:Game,now:number){
+ if(expireRoom(g,now)||g.paused)return;
  if(g.phase==='sold'&&now>=g.deadline){g.index++;g.round++;g.price=0;g.leader=null;g.passed=[];g.phase=g.index>=(g.order?.length||players.length)?'finished':'live';g.deadline=now+14000;g.nextBot=now+2500}
  if(g.phase!=='live')return;
  if(now>=g.deadline){if(g.leader){const s=g.seats[g.leader];s.purse-=g.price;s.squad.push({player:currentPlayer(g).id,price:g.price});g.log.unshift(`SOLD • ${currentPlayer(g).name} → ${g.leader} for ${money(g.price)}`)}else g.log.unshift(`UNSOLD • ${currentPlayer(g).name}`);g.phase='sold';g.deadline=now+3500;return}

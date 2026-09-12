@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {transformSync} from 'esbuild';
 const js=transformSync(readFileSync('lib/game.ts','utf8'),{loader:'ts',format:'esm'}).code;
-const {advance,bid,canBid,teams,players,isRecordSale,auctionResults,createAuctionOrder,currentPlayer,nextPrice,bidIncrement}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
+const {pauseRoom,resumeRoom,ROOM_IDLE_MS,advance,bid,canBid,teams,players,isRecordSale,auctionResults,createAuctionOrder,currentPlayer,nextPrice,bidIncrement}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
 const g={order:createAuctionOrder(),code:'TEST',host:'x',phase:'live',seats:Object.fromEntries(teams.map(t=>[t.id,{name:'AI',token:'',bot:true,purse:12000,squad:[]}])),index:0,price:0,leader:null,deadline:14000,nextBot:2500,passed:[],log:[],round:1};
 for(let now=3000;now<100000000&&g.phase!=='finished';now+=2000)advance(g,now);
 assert.equal(g.phase,'finished');const won=[];for(const s of Object.values(g.seats)){assert.ok(s.purse>=0);assert.ok(s.squad.length<=25);assert.ok(s.squad.filter(x=>players[x.player].country!=='India').length<=8);assert.equal(s.purse+s.squad.reduce((n,x)=>n+x.price,0),12000);won.push(...s.squad.map(x=>x.player))}assert.equal(new Set(won).size,won.length);assert.ok(won.length>0);
@@ -40,3 +40,10 @@ assert.equal(currentPlayer(reordered).name,'Virat Kohli');assert.equal(nextPrice
 advance(reordered,14000);assert.equal(currentPlayer(reordered).id,0);reordered.price=400;reordered.leader='CSK';reordered.deadline=15000;advance(reordered,15001);assert.equal(isRecordSale(reordered),true);assert.equal(auctionResults(reordered)[0].player.id,0);
 assert.equal(currentPlayer({...reordered,order:undefined,index:0}).id,0,'legacy rooms keep original sequence');
 console.log(`PASS: all increment boundaries, ${marquee.length} marquee players first, stable player IDs, reordered awards/results/records and legacy room order.`);
+
+const lifecycle={...structuredClone(lobby),phase:'live',lastActivity:1000,deadline:15000,nextBot:9000,leader:'CSK',price:200};
+pauseRoom(lifecycle,5000);const frozen=structuredClone(lifecycle);advance(lifecycle,9000000);assert.deepEqual(lifecycle,frozen);assert.equal(canBid(lifecycle,'MI'),false);
+resumeRoom(lifecycle,9000000);assert.equal(lifecycle.deadline,9010000);assert.equal(lifecycle.nextBot,9004000);assert.equal(lifecycle.lastActivity,9000000);
+const expiring={...structuredClone(lifecycle),lastActivity:1000};const oldSquads=JSON.stringify(expiring.seats);advance(expiring,1000+ROOM_IDLE_MS);assert.equal(expiring.closed,true);assert.equal(JSON.stringify(expiring.seats),oldSquads);assert.equal(canBid(expiring,'MI'),false);
+const polling={...structuredClone(lobby),lastActivity:1000};advance(polling,2000);assert.equal(polling.lastActivity,1000);advance(polling,1000+ROOM_IDLE_MS);assert.equal(polling.closed,true);
+console.log('PASS: pause freezes timers and bots, resume restores remaining time, idle expiry precedes awards, polling cannot extend room lifetime.');

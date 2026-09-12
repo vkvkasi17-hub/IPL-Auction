@@ -49,3 +49,12 @@ assert.equal(Object.keys(fullAudience.seats).length,10);assert.equal(fullAudienc
 const repeated=await request(fullHost,{action:'join',name:'Duplicate',team:'MI',code:full.code});
 assert.equal(Object.values(repeated.seats).filter(s=>s.mine).length,1);assert.equal(Object.keys(repeated.seats).length,10);
 console.log('PASS: ten-seat cap, audience in full/live rooms, audience reconnect, no audience bids/start/pass, private tokens, duplicate join safety.');
+
+await request(users[1],{action:'pause',code},400);
+room=await request(users[0],{action:'pause',code});assert.ok(room.paused);const pauseState=room.paused;
+await request(users[1],{action:'resume',code},400);
+await request(users[1],{action:'bid',code,round:room.round,amount:240},400);
+await request(audience,{action:'pause',code},403);
+const pausedReload=await fetch(url+'?code='+code,{headers:{Cookie:users[0].cookie}});const pausedData=await pausedReload.json();assert.deepEqual(pausedData.paused,pauseState);assert.equal(pausedData.host,'you');
+room=await request(users[0],{action:'resume',code});assert.equal(room.paused,undefined);assert.ok(room.deadline>=Date.now());
+console.log('PASS: host-only pause/resume, paused bid rejection and authenticated paused-room reconnect.');

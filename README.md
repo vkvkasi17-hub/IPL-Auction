@@ -139,3 +139,13 @@ Reload restores the active room using its URL and session cookie. Home is an exp
 The auction hall uses lightweight CSS 3D scenery with an auctioneer, ten seated delegations, moving lights, a board synchronized to the current player, and a raised paddle for the leading franchise. It can be paused or collapsed; reduced-motion settings are respected. The menu clock displays the visitor’s device-local time and date. Home includes a no-bid hall demo and a ten-team explorer. Edit `components/auction-hall.tsx` and `components/local-clock.tsx` for these features.
 
 Player data provenance and stable ID rules: [PLAYER_DATA.md](PLAYER_DATA.md). Desktop has compact navigation, a persistent bid dock, and a scrollable sold-player rail; the mobile dock remains available while scrolling.
+
+
+### Room controls and motion
+The homepage rotates through all players every 3 seconds. Preview bidding or manual navigation holds a player until 10 seconds without pointer, keyboard or scrolling activity; visitors can also pause rotation explicitly.
+
+Only the original host session can pause/resume a live auction. Paused rooms preserve the lot, purse, bids and remaining clock, and are exempt from inactivity expiry. Return using the room code in the same browser (with its session cookie intact); the code alone does not grant host access.
+
+Unpaused, unfinished rooms expire after 10 minutes without player interaction. Server checks expiry before advancing any bids on each request, so abandoned rooms cannot continue when reopened. Polling and computer bids never renew activity, hidden tabs stop polling, and closed tabs run no auction loop. Expired room records remain available for results; they are not deleted. Audience viewing is read-only and does not extend the room lifetime.
+
+The cricket-ball page scroll control supports dragging and arrow/Page/Home/End keys. Reduced-motion settings disable decorative rolling, swings and card tilt. Nested player lists retain their native scrolling.

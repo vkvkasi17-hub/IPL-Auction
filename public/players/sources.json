@@ -1,0 +1,1388 @@
+{
+  "Rishabh Pant": {
+    "name": "Rishabh Pant",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F17617.png&brand=ipl",
+    "sha256": "5a1e0f07517c2e34afa627e61a6280bbf0642c154329792132a54e1e1b5eacb4",
+    "bytes": 45706
+  },
+  "Shreyas Iyer": {
+    "name": "Shreyas Iyer",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F22014.png&brand=ipl",
+    "sha256": "8ed940e5b3c574b1b6864f36fe2245692e00d846ee021c4571630dd868a8249c",
+    "bytes": 45989
+  },
+  "Jos Buttler": {
+    "name": "Jos Buttler",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F16261.png&brand=ipl",
+    "sha256": "93c4148c95d3c3e3fca0929969a8429b820dd0c92e233cd7c81e49e6a856c706",
+    "bytes": 45635
+  },
+  "Arshdeep Singh": {
+    "name": "Arshdeep Singh",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F67190.png&brand=ipl",
+    "sha256": "8976fa4c703b74342b39d60398da79db04ee220226c10658b1a3738ac53b11d6",
+    "bytes": 46918
+  },
+  "Mitchell Starc": {
+    "name": "Mitchell Starc",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F14328.png&brand=ipl",
+    "sha256": "346e11f8271c10ff18450146bc527ef39bcc1d8bce32bfeadd947688f6c16c7a",
+    "bytes": 47566
+  },
+  "KL Rahul": {
+    "name": "KL Rahul",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F20451.png&brand=ipl",
+    "sha256": "1c288d8a6c659d645462988a084d0bdb45c603eae3c4d90ffaf79cd81bec8405",
+    "bytes": 44606
+  },
+  "Yuzvendra Chahal": {
+    "name": "Yuzvendra Chahal",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F14621.png&brand=ipl",
+    "sha256": "b17649768f22cea3ccba9117561c0b2d57b50b3e8d33ef21c75cfe162336361e",
+    "bytes": 45768
+  },
+  "Liam Livingstone": {
+    "name": "Liam Livingstone",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F23875.png&brand=ipl",
+    "sha256": "804de2aa60ee7072f7471f37063f918be18f7e6d2071f5e8345c409d7817b889",
+    "bytes": 48210
+  },
+  "Mohammed Shami": {
+    "name": "Mohammed Shami",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F11458.png&brand=ipl",
+    "sha256": "7507d0d9e82b8b9026a2a14541ea32773abb1e0348cd738cda010392ba1036f2",
+    "bytes": 44306
+  },
+  "David Miller": {
+    "name": "David Miller",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F13575.png&brand=ipl",
+    "sha256": "756ac3131ff20ddb81efdf42d08085525ac26c5a6d9acf0819d6b6a94a6944f3",
+    "bytes": 51610
+  },
+  "Glenn Maxwell": {
+    "name": "Glenn Maxwell",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F2138%2F12614.png&brand=ipl",
+    "sha256": "63d441089f403fa88b68efda38484729b04316d944bc9bedb6baf6c1a884824c",
+    "bytes": 25781
+  },
+  "Mohammed Siraj": {
+    "name": "Mohammed Siraj",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F44904.png&brand=ipl",
+    "sha256": "5b3651a47988f58b310e44987cba00aa0f9e10a82520a52712f6364e3a82693f",
+    "bytes": 47153
+  },
+  "Trent Boult": {
+    "name": "Trent Boult",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F14330.png&brand=ipl",
+    "sha256": "a701fe64b27479cd0ba0ae1911e7797e57e0bb7b761efd30f51d6675efe0820c",
+    "bytes": 44233
+  },
+  "Marcus Stoinis": {
+    "name": "Marcus Stoinis",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F10925.png&brand=ipl",
+    "sha256": "488458eeaff2f3d8226b01e5f5180b2235c0802da1c8b7d540ef50cb524c7ea6",
+    "bytes": 57054
+  },
+  "Ishan Kishan": {
+    "name": "Ishan Kishan",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F20227.png&brand=ipl",
+    "sha256": "cf099b9d4d5605a35fba3d166e877a5c29a720c460a036680f4d6ee062a8d77c",
+    "bytes": 44510
+  },
+  "Venkatesh Iyer": {
+    "name": "Venkatesh Iyer",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F34170.png&brand=ipl",
+    "sha256": "fddaeb67753bdf2bc2bed2121e9fbee69934835bc78830779594a2abbde59848",
+    "bytes": 48049
+  },
+  "Phil Salt": {
+    "name": "Phil Salt",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F28502.png&brand=ipl",
+    "sha256": "2c5c27779ec0342310ce16dd94247be52a6920478f119bc9d6bfc6956ca44c2f",
+    "bytes": 46622
+  },
+  "Devon Conway": {
+    "name": "Devon Conway",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1622%2F21804.png&brand=ipl",
+    "sha256": "ef1d4c5cd00d52dbe8702bfaa674bba0dd3f7ed3a66b1d9abf9b40f123c4f698",
+    "bytes": 46121
+  },
+  "Rahul Tripathi": {
+    "name": "Rahul Tripathi",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F22692.png&brand=ipl",
+    "sha256": "7d2430ca1bb57c9a40579e7b4b54d3c92369853a599d5d2c1146f1130e7d684a",
+    "bytes": 49051
+  },
+  "Rachin Ravindra": {
+    "name": "Rachin Ravindra",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F26162.png&brand=ipl",
+    "sha256": "db9e46fbf88c9733521f7dccd7c3fcfcc7d82c56a433151a091b385b8811f61e",
+    "bytes": 53543
+  },
+  "Aiden Markram": {
+    "name": "Aiden Markram",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F27774.png&brand=ipl",
+    "sha256": "ff8d3d44165bc6de8a309b749955fd53c6074cae8260f513e241216f7c772f37",
+    "bytes": 45348
+  },
+  "Faf du Plessis": {
+    "name": "Faf du Plessis",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1622%2F14151.png&brand=ipl",
+    "sha256": "81734fa4f6e68cc372ab03133b8a02333f0a2e80bb1714b54b3ce7c49b5ee009",
+    "bytes": 25432
+  },
+  "Washington Sundar": {
+    "name": "Washington Sundar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F20226.png&brand=ipl",
+    "sha256": "09e3036bf9e1f462bee498c4718bea0c6100f95f3e18bd6a79afad588f9f06ce",
+    "bytes": 47785
+  },
+  "Ravichandran Ashwin": {
+    "name": "Ravichandran Ashwin",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1622%2F14164.png&brand=ipl",
+    "sha256": "44b9f1fc65553927cdf6117a4fd6ff7f9e282081337a6841d26b79f3a0945df6",
+    "bytes": 45918
+  },
+  "Bhuvneshwar Kumar": {
+    "name": "Bhuvneshwar Kumar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F12690.png&brand=ipl",
+    "sha256": "359736937b07063a5f1a624e3450e01580e00d4fcb4139cdcb6d4c224952064f",
+    "bytes": 49110
+  },
+  "T Natarajan": {
+    "name": "Thangarasu Natarajan",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F37001.png&brand=ipl",
+    "sha256": "69a898c0bda7c5c787e051baff84f90de01068b1629b092b59331915b57e0720",
+    "bytes": 49298
+  },
+  "Deepak Chahar": {
+    "name": "Deepak Chahar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F19257.png&brand=ipl",
+    "sha256": "77d610e8aad280b82ea8dea37f8c5e2c6be503328e0194fbddbea095236c7d31",
+    "bytes": 43265
+  },
+  "Harshal Patel": {
+    "name": "Harshal Patel",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F18000.png&brand=ipl",
+    "sha256": "2b47d8daf70f96fd77cd8a41fd04bfdb66d7b66390bfc70016e1dd1c0d449f24",
+    "bytes": 48079
+  },
+  "Avesh Khan": {
+    "name": "Avesh Khan",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F20223.png&brand=ipl",
+    "sha256": "1599ee63abc8479257dd29fdf4caf3a2c3187638444b471ae7067cb3b06289b2",
+    "bytes": 45913
+  },
+  "Prasidh Krishna": {
+    "name": "Prasidh Krishna",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F59553.png&brand=ipl",
+    "sha256": "0f45eb1ee94861951608d35b0cd3e98a40f9b865019d1f0aa5be53d7f25ee264",
+    "bytes": 44032
+  },
+  "Ravi Bishnoi": {
+    "name": "Ravi Bishnoi",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F70430.png&brand=ipl",
+    "sha256": "8ec8b13c4f9652445c886ea43b5be19bc0475eea896e3a10245a520163f5774c",
+    "bytes": 45642
+  },
+  "Krunal Pandya": {
+    "name": "Krunal Pandya",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F20456.png&brand=ipl",
+    "sha256": "15eec1c8f62a7de0672afeb1cfe53958d7e9a82c7ff2718d85b99f9f9a296ab2",
+    "bytes": 47350
+  },
+  "Sam Curran": {
+    "name": "Sam Curran",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1622%2F21837.png&brand=ipl",
+    "sha256": "fe40ded43006374731424700b3c8b1a75fa0c7e1f3bb388e053a34becf53cc79",
+    "bytes": 25135
+  },
+  "Jofra Archer": {
+    "name": "Jofra Archer",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F28503.png&brand=ipl",
+    "sha256": "9678503ce4332412139c8b1fdc7f54d99f1289f86a8e85792430db0e8cbbe4a2",
+    "bytes": 51497
+  },
+  "Quinton de Kock": {
+    "name": "Quinton de Kock",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F17614.png&brand=ipl",
+    "sha256": "ff0065864db35a32aa2846055c3c62122bd4e4a76fecb817659044a6e33f8a0d",
+    "bytes": 44672
+  },
+  "Will Jacks": {
+    "name": "Will Jacks",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F65551.png&brand=ipl",
+    "sha256": "e67cb9bd68caaf23f545d64a502224e07ad393b14c9caf8c233afb3c1c5e8188",
+    "bytes": 47754
+  },
+  "Tim David": {
+    "name": "Tim David",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F67369.png&brand=ipl",
+    "sha256": "916813ea16a158e8771fd2f73dc9602f33babebc0bbffc7ebd365915cfdd0fc1",
+    "bytes": 47930
+  },
+  "Nitish Rana": {
+    "name": "Nitish Rana",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F23460.png&brand=ipl",
+    "sha256": "3182b3c2b4d7fd9ff85ea6f614e3e1a97dbb829a19f52f0f629766f0bdbcd050",
+    "bytes": 45865
+  },
+  "Abdul Samad": {
+    "name": "Abdul Samad",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F70433.png&brand=ipl",
+    "sha256": "5a200b802b3b6bbda41687ef86b905a1320891a469deca3e2143f81d5b9ffcce",
+    "bytes": 41344
+  },
+  "Abhinav Manohar": {
+    "name": "Abhinav Manohar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1153%2F69551.png&brand=ipl",
+    "sha256": "5684f2b2f6a88caf5109bdb5bfecbe4fbbd928cb4aef79176cf796bf635c1b04",
+    "bytes": 55587
+  },
+  "Shahbaz Ahmed": {
+    "name": "Shahbaz Ahmed",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F70625.png&brand=ipl",
+    "sha256": "5948bbc5d8ef7a074e1991b54a87a0cbf3eef6111c616fcea1fb588cafcb789f",
+    "bytes": 46132
+  },
+  "Mahipal Lomror": {
+    "name": "Mahipal Lomror",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1558%2F20222.png&brand=ipl",
+    "sha256": "5e20580478ac55674e301fefb274079b7675932c63b18e69e952169b235f5fa7",
+    "bytes": 28095
+  },
+  "Anuj Rawat": {
+    "name": "Anuj Rawat",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F66837.png&brand=ipl",
+    "sha256": "cbafe190046d7854063b6058da0d4278128fe261e07022f1cf8ec1dcb5441b26",
+    "bytes": 46919
+  },
+  "Jitesh Sharma": {
+    "name": "Jitesh Sharma",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F20033.png&brand=ipl",
+    "sha256": "66d7832d9c8029948072d980dd6787cbcef7d7c8af19b4e0ad750b37c0f53c9f",
+    "bytes": 43911
+  },
+  "Ashutosh Sharma": {
+    "name": "Ashutosh Sharma",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F67627.png&brand=ipl",
+    "sha256": "f38da5b28adc5a8cd0b20443f45b44c200277b037aac1f6e94ac055a24281225",
+    "bytes": 47605
+  },
+  "Nehal Wadhera": {
+    "name": "Nehal Wadhera",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F68289.png&brand=ipl",
+    "sha256": "1342fd60923fab754fc4adc567901c2490257d5525dc83ba9205f9caa18e9ab6",
+    "bytes": 45303
+  },
+  "Naman Dhir": {
+    "name": "Naman Dhir",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F79429.png&brand=ipl",
+    "sha256": "ac1a8ad82a0c74fea0c25e90559be33b055e9867ef1967ac4976cd2df236c060",
+    "bytes": 42528
+  },
+  "Angkrish Raghuvanshi": {
+    "name": "Angkrish Raghuvanshi",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F76204.png&brand=ipl",
+    "sha256": "45e13cf37f48d4242dcf1c038cef30787d5f74d86e12db0a87237982decbd7df",
+    "bytes": 51012
+  },
+  "Sameer Rizvi": {
+    "name": "Sameer Rizvi",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F71449.png&brand=ipl",
+    "sha256": "689d8baa82aae6f3bd729839bef4d154f676b39eed65a998691cc1f7ededdd04",
+    "bytes": 46098
+  },
+  "Suyash Sharma": {
+    "name": "Suyash Sharma",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F80525.png&brand=ipl",
+    "sha256": "83102daee6b561f6cf9a381c1853f6746559c413b4190e48ee90ec866f95b6dc",
+    "bytes": 41744
+  },
+  "Mukesh Kumar": {
+    "name": "Mukesh Kumar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F31742.png&brand=ipl",
+    "sha256": "5347634906481d9263051b0346b677c88d52308546124a0acc1f53937b1aacb4",
+    "bytes": 47995
+  },
+  "Khaleel Ahmed": {
+    "name": "Khaleel Ahmed",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F43272.png&brand=ipl",
+    "sha256": "0345dd7bf21fe11d14e4490358efcf9275b0ebf687591e35714f4ee1d47855e6",
+    "bytes": 46939
+  },
+  "Ishant Sharma": {
+    "name": "Ishant Sharma",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F17701.png&brand=ipl",
+    "sha256": "505d65ae2588743d3178d3cf136885ba8497d2a71436e1192d8d938bb22e6e22",
+    "bytes": 44020
+  },
+  "Umesh Yadav": {
+    "name": "Umesh Yadav",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1396%2F11660.png&brand=ipl",
+    "sha256": "8245817b5c2eb45625fb8978b6254e6d273d419209a35add3f26251d2b8b669c",
+    "bytes": 17811
+  },
+  "Jaydev Unadkat": {
+    "name": "Jaydev Unadkat",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F15271.png&brand=ipl",
+    "sha256": "5cc3905d1652e5a084bbb16cd535d7dae59ba57909d1c2a68fdc7c66340f3880",
+    "bytes": 46308
+  },
+  "Mayank Agarwal": {
+    "name": "Mayank Agarwal",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F2138%2F16946.png&brand=ipl",
+    "sha256": "3559ab590f31ee7587c15d80c939cba21b2bce5a9424cfcf7dc6c66903d3e69e",
+    "bytes": 49227
+  },
+  "Manish Pandey": {
+    "name": "Manish Pandey",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F16935.png&brand=ipl",
+    "sha256": "e35a398385a9140fb80f8f5307d586e85df3c190a70ed06e036b99edc015fe17",
+    "bytes": 50500
+  },
+  "Ajinkya Rahane": {
+    "name": "Ajinkya Rahane",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F12685.png&brand=ipl",
+    "sha256": "cb8e7bb4bb5c572d577af228227d83f86459a66de40fdfabbdf9ad8b7c8deed8",
+    "bytes": 52145
+  },
+  "Prithvi Shaw": {
+    "name": "Prithvi Shaw",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F65301.png&brand=ipl",
+    "sha256": "b6d6ff629556dd036594ec10b643d95b8f2192c1af0667930097403143bba8a4",
+    "bytes": 47402
+  },
+  "Virat Kohli": {
+    "name": "Virat Kohli",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F13144.png&brand=ipl",
+    "sha256": "306a3055e486095ecc98d70823978b794d56912ba8cf307bcd1748ce6e3daf01",
+    "bytes": 44091
+  },
+  "Rohit Sharma": {
+    "name": "Rohit Sharma",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F11326.png&brand=ipl",
+    "sha256": "286e2ec97be8f518d0978ce5234dea47cfb3dd336f42fe52311525f60cf59afb",
+    "bytes": 44871
+  },
+  "MS Dhoni": {
+    "name": "Mahendra Singh Dhoni",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F11318.png&brand=ipl",
+    "sha256": "8290afe7f56d1739e7b5fbec1b0345f883398873b37731c4f7aa5f3bbd6bb04a",
+    "bytes": 45075
+  },
+  "Jasprit Bumrah": {
+    "name": "Jasprit Bumrah",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F16096.png&brand=ipl",
+    "sha256": "9a278d91b4955586c746f08a370b3dff655e868aaaf454d02aa3d51acfb3c8ca",
+    "bytes": 47412
+  },
+  "Hardik Pandya": {
+    "name": "Hardik Pandya",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F16093.png&brand=ipl",
+    "sha256": "ffec1399e327250d448c0d22ccfc533ee37f76d037a68c8cb87e865008ba5772",
+    "bytes": 48896
+  },
+  "Suryakumar Yadav": {
+    "name": "Suryakumar Yadav",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F20861.png&brand=ipl",
+    "sha256": "4aa94893370265676f1d663b24fb010c0ea5766b2bd223264c31548d50a04f69",
+    "bytes": 47989
+  },
+  "Ruturaj Gaikwad": {
+    "name": "Ruturaj Gaikwad",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F64377.png&brand=ipl",
+    "sha256": "19071946e2db1dae69206874d188976b3fe83e2cd60fdbe23d9fcabd9f73cfda",
+    "bytes": 46163
+  },
+  "Sanju Samson": {
+    "name": "Sanju Samson",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F17613.png&brand=ipl",
+    "sha256": "00008d985174f984db8be1b0ed49e9416806420ec1f172b791ac321741a61b89",
+    "bytes": 48255
+  },
+  "Shubman Gill": {
+    "name": "Shubman Gill",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F65345.png&brand=ipl",
+    "sha256": "8d24ec335a35ffcc7a9bc1eb5840eedac19db9e7229926b736ae8bb5ea03e77b",
+    "bytes": 46036
+  },
+  "Rashid Khan": {
+    "name": "Rashid Khan",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F25242.png&brand=ipl",
+    "sha256": "f5d5d21a0428fc576c9c2fc5771a086d63135989965aa962a5bf46cd8ae1b39e",
+    "bytes": 42461
+  },
+  "Rinku Singh": {
+    "name": "Rinku Singh",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F33718.png&brand=ipl",
+    "sha256": "c0d98577cc21e5859dcdddbb4627598d4079b873193f431341bdfd6416e41a67",
+    "bytes": 50492
+  },
+  "Sunil Narine": {
+    "name": "Sunil Narine",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F11658.png&brand=ipl",
+    "sha256": "1495056b8d41c1545384ecf6b7c4b181744ba2ea7cccbea3a7c1b16a0a160a1d",
+    "bytes": 50745
+  },
+  "Nicholas Pooran": {
+    "name": "Nicholas Pooran",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F23906.png&brand=ipl",
+    "sha256": "45f388f85e8bf46f8513291ba71f21d03e6248546af4bcab9bd21d96339dde0a",
+    "bytes": 43750
+  },
+  "Axar Patel": {
+    "name": "Axar Patel",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F17616.png&brand=ipl",
+    "sha256": "06c34ecc2ce6ada9e64b0110bf7c702b4f91b488e1f662a1c612e184ca57b6ac",
+    "bytes": 50822
+  },
+  "Kuldeep Yadav": {
+    "name": "Kuldeep Yadav",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F20030.png&brand=ipl",
+    "sha256": "25d74dc0837d17020b3897a9d576ac4c6bc6d14876ae9221f6b9849c417d19b0",
+    "bytes": 47202
+  },
+  "Yashasvi Jaiswal": {
+    "name": "Yashasvi Jaiswal",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F68314.png&brand=ipl",
+    "sha256": "5d4247deda582effb2091111ba82d7c1776cd0e276ac38a5c0df7d040d5322eb",
+    "bytes": 44810
+  },
+  "Ravindra Jadeja": {
+    "name": "Ravindra Jadeja",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F13143.png&brand=ipl",
+    "sha256": "9af9883fa734f487d8bf8057af5e41549f52c7062ee2d3e3fd04a79274be18e4",
+    "bytes": 46375
+  },
+  "Prabhsimran Singh": {
+    "name": "Prabhsimran Singh",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F68831.png&brand=ipl",
+    "sha256": "9666aa44e71e6b7bbaa3c483946d47c370410093ff7154b494cf5bbe966fb26e",
+    "bytes": 43447
+  },
+  "Shashank Singh": {
+    "name": "Shashank Singh",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F34331.png&brand=ipl",
+    "sha256": "49cd815506a79d1438267da88a83fa6cf976c054e76d2cf22945d9248da215e6",
+    "bytes": 47785
+  },
+  "Travis Head": {
+    "name": "Travis Head",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F21033.png&brand=ipl",
+    "sha256": "b03c78b12eb0a6dbebc3b0a67c0ffe560043c2014b1bac7e5a460f3ee5b54b8f",
+    "bytes": 47187
+  },
+  "Pat Cummins": {
+    "name": "Pat Cummins",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F14153.png&brand=ipl",
+    "sha256": "a479d765d6440b24687c31813ceac5539b123b30a6c910814f1297340d479cc4",
+    "bytes": 46155
+  },
+  "Abhishek Sharma": {
+    "name": "Abhishek Sharma",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F65346.png&brand=ipl",
+    "sha256": "97389be86e79176f8cfe85ad43d462a4e63e90a33bbf446dac1c9e005c148724",
+    "bytes": 46987
+  },
+  "Heinrich Klaasen": {
+    "name": "Heinrich Klaasen",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F23673.png&brand=ipl",
+    "sha256": "1f3ca81b3db14a70de0b6f837e5c060bf1316136459288ad6d81231df6d9aef5",
+    "bytes": 50912
+  },
+  "Rajat Patidar": {
+    "name": "Rajat Patidar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F29333.png&brand=ipl",
+    "sha256": "09dd3dd20ece536e59268f89d8c1c407cd78acc42a171b67faa9aa96a395b647",
+    "bytes": 45507
+  },
+  "Josh Hazlewood": {
+    "name": "Josh Hazlewood",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F14327.png&brand=ipl",
+    "sha256": "a65b08b2aa5b58a87eb599a95d8c082c0a2cedabfebfb0754bacc45a9b7e11ef",
+    "bytes": 47820
+  },
+  "Jake Fraser-McGurk": {
+    "name": "Jake Fraser-McGurk",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F1396%2F69824.png&brand=ipl",
+    "sha256": "5869ecd2e65f3e5a65f9ea932f061534b0c342873fe65129a7cc2f7a20430f3a",
+    "bytes": 39421
+  },
+  "Cameron Green": {
+    "name": "Cameron Green",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F65397.png&brand=ipl",
+    "sha256": "6dd866a8c89c7dd7b8ff03d69f7ef325900cfea4e33fc53887cdb95f6527e79f",
+    "bytes": 52800
+  },
+  "Sarfaraz Khan": {
+    "name": "Sarfaraz Khan",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F20224.png&brand=ipl",
+    "sha256": "c51ca4bcc1e336392bc0c6cf869cc2e9b315db1c060c160e4fcd4fc9bd4230d1",
+    "bytes": 43897
+  },
+  "Wanindu Hasaranga": {
+    "name": "Wanindu Hasaranga",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F26489.png&brand=ipl",
+    "sha256": "2ee32fd01b5a27baf24a0761e7ceccacc4cb765c35bde6cc44e9d6b7a2ee5d76",
+    "bytes": 51573
+  },
+  "Deepak Hooda": {
+    "name": "Deepak Hooda",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F2040%2F20738.png&brand=ipl",
+    "sha256": "173cb64ab4789593713d940bc623504cc790b7e4999ef25e405cf7448580dd9b",
+    "bytes": 28910
+  },
+  "Wiaan Mulder": {
+    "name": "Wiaan Mulder",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1153%2F20969.png&brand=ipl",
+    "sha256": "3c5df48985e08c0d939b4d0c6a863bd2ae41535d60afd76fcb266d9d0adfc6e3",
+    "bytes": 50754
+  },
+  "Finn Allen": {
+    "name": "Finn Allen",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F26170.png&brand=ipl",
+    "sha256": "e4c5d047259cf885a91d6599037af73a79ba14664a8dcd4a7b12e9240c1e7c58",
+    "bytes": 51534
+  },
+  "Jonny Bairstow": {
+    "name": "Jonny Bairstow",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1153%2F13284.png&brand=ipl",
+    "sha256": "a3ed3be5d49fe0aefd65ccbaaf78e03a0a5affa04b458a2bf8a5957fd559fe35",
+    "bytes": 26749
+  },
+  "K.S. Bharat": {
+    "name": "KS Bharat",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F2138%2F27716.png&brand=ipl",
+    "sha256": "3ad89058eee20aa610c51249278b96235d17616d2d8a153c1c008afad68308e6",
+    "bytes": 28138
+  },
+  "Rahmanullah Gurbaz": {
+    "name": "Rahmanullah Gurbaz",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1873%2F67497.png&brand=ipl",
+    "sha256": "878aa2ad8642d046715e79450dcbcd3a99ab968f4088e6058f93f7a9a628860e",
+    "bytes": 52015
+  },
+  "Gerald Coetzee": {
+    "name": "Gerald Coetzee",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F66452.png&brand=ipl",
+    "sha256": "d11d6f5d909ed6bc436485c54d3b71870c25030e9e77ba56bf933472736901e8",
+    "bytes": 46904
+  },
+  "Jacob Duffy": {
+    "name": "Jacob Duffy",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F15670.png&brand=ipl",
+    "sha256": "8de9865836b759f70b5466cd9e30dda4446d3e38cdded06f1f9c8a3815d083ec",
+    "bytes": 47549
+  },
+  "Fazalhaq Farooqi": {
+    "name": "Fazalhaq Farooqi",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1558%2F67208.png&brand=ipl",
+    "sha256": "8adbde791b0d01948eaa9db4853736dfced6dafa089f6a0dbba2410507502751",
+    "bytes": 45561
+  },
+  "Matt Henry": {
+    "name": "Matt Henry",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F18052.png&brand=ipl",
+    "sha256": "975d6222a4fecc3502b1fb3238682be3b27fa88f10661a7aa365c1e86c47239f",
+    "bytes": 43527
+  },
+  "Spencer Johnson": {
+    "name": "Spencer Johnson",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F66728.png&brand=ipl",
+    "sha256": "9790cc84e17bfa4722af0c02a3e861f1caff99171286579f62a9d9573cea9bc8",
+    "bytes": 47536
+  },
+  "Shivam Mavi": {
+    "name": "Shivam Mavi",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F65553.png&brand=ipl",
+    "sha256": "c2005b44d261e5baab942c8db721fd6b743f55452ffc7a3068b69ce6e067fe07",
+    "bytes": 46307
+  },
+  "Anrich Nortje": {
+    "name": "Anrich Nortje",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F23659.png&brand=ipl",
+    "sha256": "687f2aa1b21109445331193459dc697652cfb3bbb6564994d04f23860d631b60",
+    "bytes": 47467
+  },
+  "Matheesha Pathirana": {
+    "name": "Matheesha Pathirana",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F72580.png&brand=ipl",
+    "sha256": "04c2711e06328f6584582cefa76ff2ccdde6f78637e5dda945a6571c50649f29",
+    "bytes": 52919
+  },
+  "Rahul Chahar": {
+    "name": "Rahul Chahar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F63511.png&brand=ipl",
+    "sha256": "01524589d2841e94f5bacfa8753d260d429ea7ae8875ee39ce3ad4ffbab90068",
+    "bytes": 46024
+  },
+  "Akeal Hosein": {
+    "name": "Akeal Hosein",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F24868.png&brand=ipl",
+    "sha256": "4c59dba75e0f1da5ef23fc4b37162abf32f7de5034949b0c69bf10d31d809647",
+    "bytes": 43931
+  },
+  "Mujeeb Rahman": {
+    "name": "Mujeeb Ur Rahman",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1153%2F66734.png&brand=ipl",
+    "sha256": "e6aa25667ae4907ad0d3866940cd7784c0fe0f1240f4a41824e415cdf1f54d4f",
+    "bytes": 27674
+  },
+  "Maheesh Theekshana": {
+    "name": "Maheesh Theekshana",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1558%2F67860.png&brand=ipl",
+    "sha256": "efef2cc1ceb96ce9b1afd00beff092e3bbdc6e718b636bbf5b068b8f8e6eddcb",
+    "bytes": 44810
+  },
+  "Yash Dhull": {
+    "name": "Yash Dhull",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F1396%2F76207.png&brand=ipl",
+    "sha256": "306bb8797071327907f8eedc5be496ab473c8c8616ed028d5279dbae5d3cf268",
+    "bytes": 42909
+  },
+  "Anmolpreet Singh": {
+    "name": "Anmolpreet Singh",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1854%2F38832.png&brand=ipl",
+    "sha256": "c63790dac444942710a5b57e05363a60dab4cf9bdb24448f3d8cfb2397fcd0b3",
+    "bytes": 28748
+  },
+  "Atharva Taide": {
+    "name": "Atharva Taide",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1153%2F68291.png&brand=ipl",
+    "sha256": "8afea33c8b7799cef61da16ef60408606c056f9084860db31a4480ab1dbe5f92",
+    "bytes": 54667
+  },
+  "Auqib Dar": {
+    "name": "Auqib Nabi",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F68788.png&brand=ipl",
+    "sha256": "cff86436940a089faaac4f91cd978acba04c2a87f8a3cc10630ea48989a827c7",
+    "bytes": 47315
+  },
+  "Rajvardhan Hangargekar": {
+    "name": "Rajvardhan Hangargekar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F2880%2F70448.png&brand=ipl",
+    "sha256": "23ba5e73a83258a3a6a8b0ee22904efc0255ed163eca935b239c5184a8658895",
+    "bytes": 56991
+  },
+  "Tanush Kotian": {
+    "name": "Tanush Kotian",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F1558%2F69823.png&brand=ipl",
+    "sha256": "8e14bf6a901adbfa786bb30e0c3d6d89f7b5e81cf7677151f6c0a343690989f7",
+    "bytes": 42491
+  },
+  "Shivang Kumar": {
+    "name": "Shivang Kumar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F90837.png&brand=ipl",
+    "sha256": "d1790562b6740c572867ffad17c6742cad3400fac78f22e1d0087e2fccb4f181",
+    "bytes": 46225
+  },
+  "Kamlesh Nagarkoti": {
+    "name": "Kamlesh Nagarkoti",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1622%2F65355.png&brand=ipl",
+    "sha256": "b9940174a5f3623837a721ededa1164c643ad8df0462a6dec8b76060872a4075",
+    "bytes": 45253
+  },
+  "Vijay Shankar": {
+    "name": "Vijay Shankar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1153%2F27213.png&brand=ipl",
+    "sha256": "5ca653cc70231ca356abad78e19af1caae57d8e44f659edb925d3a09ac8d3700",
+    "bytes": 31769
+  },
+  "Sanvir Singh": {
+    "name": "Sanvir Singh",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F1153%2F68814.png&brand=ipl",
+    "sha256": "b8fa3f53c1d841f979f4be52fc3feb0090f9426d0382131517d24d9844033eac",
+    "bytes": 48642
+  },
+  "Prashant Veer": {
+    "name": "Prashant Veer",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F82907.png&brand=ipl",
+    "sha256": "05d7c10b98a91a62ea2baa7f3118b4f8b8b7c1e1a19879b47b983deace9aa240",
+    "bytes": 44651
+  },
+  "Vansh Bedi": {
+    "name": "Vansh Bedi",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1622%2F86806.png&brand=ipl",
+    "sha256": "a7cf569512fb85b86d6ef5319d0ba73f43810c864ae02da2b760b11a7e700c4c",
+    "bytes": 45026
+  },
+  "Mukul Choudhary": {
+    "name": "Mukul Choudhary",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F79805.png&brand=ipl",
+    "sha256": "46f4ee12245784b779d4bba88976a9c5b22526375b141bf8c519088cc3f4624e",
+    "bytes": 45059
+  },
+  "Kartik Sharma": {
+    "name": "Kartik Sharma",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F87338.png&brand=ipl",
+    "sha256": "da93ac0855dc906c61609bf6443d9b04ef8e3d971c44988c6907e458d9b6e475",
+    "bytes": 44358
+  },
+  "Akash Madhwal": {
+    "name": "Akash Madhwal",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F72670.png&brand=ipl",
+    "sha256": "7ab31166c3ef75e6374055702cc68a70116a74dfa48cde7958f43e7a3d0fb53f",
+    "bytes": 43590
+  },
+  "Sushant Mishra": {
+    "name": "Sushant Mishra",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F71452.png&brand=ipl",
+    "sha256": "844fb3facb56f86d9d77c3d02e110f9199db93a13232d28246afb6c13f87a38a",
+    "bytes": 46126
+  },
+  "Ashok Sharma": {
+    "name": "Ashok Sharma",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F76540.png&brand=ipl",
+    "sha256": "a51475b8287f673d27815b39fae3f75df9ae8701a7ef806ff1d9f249378a1379",
+    "bytes": 46215
+  },
+  "Simarjeet Singh": {
+    "name": "Simarjeet Singh",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1153%2F68700.png&brand=ipl",
+    "sha256": "b4bd04da1e91a09ea63c395e191322a0c7460e31c3a85b2d93044407f39e9773",
+    "bytes": 54894
+  },
+  "Naman Tiwari": {
+    "name": "Naman Tiwari",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F83310.png&brand=ipl",
+    "sha256": "fc9570515d989a29b4e505f2666216dd8f112e28614c8a442599965d6a3ea410",
+    "bytes": 45607
+  },
+  "Kartik Tyagi": {
+    "name": "Kartik Tyagi",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F66831.png&brand=ipl",
+    "sha256": "bd1d1f4b4c6f65e722ffccd8abda4f1677b312fc50639cd5a8facdbbc0950d9c",
+    "bytes": 53177
+  },
+  "Yash Raj Punja": {
+    "name": "Yash Punja",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F92045.png&brand=ipl",
+    "sha256": "b341a30ac3d2337e15802bfe26abf12e62494ec1c6c4ab107122d247c2a52169",
+    "bytes": 49733
+  },
+  "Vignesh Puthur": {
+    "name": "Vignesh Puthur",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F87852.png&brand=ipl",
+    "sha256": "20722e293ad3ecbc3641cc0135f7e4d7ebbe9355e8c0bd283e6fd3263dfd3160",
+    "bytes": 43924
+  },
+  "Karn Sharma": {
+    "name": "Karn Sharma",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1854%2F20618.png&brand=ipl",
+    "sha256": "ff8e9e6ef6152917e723cecdae276bd3dde113f96075fc184b031aeba2ba1782",
+    "bytes": 45364
+  },
+  "Kumar Kartikeya Singh": {
+    "name": "Kumar Kartikeya",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1558%2F68769.png&brand=ipl",
+    "sha256": "c0444ba4cc86975e72e1177bca07afa9ba1acd4c061842bdb8872c4b9d8c50bc",
+    "bytes": 45609
+  },
+  "Prashant Solanki": {
+    "name": "Prashant Solanki",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F74067.png&brand=ipl",
+    "sha256": "54445ac96a836b1bbf90a329c55b05f0f7c9766025f70c615f7197b3b85d8745",
+    "bytes": 50745
+  },
+  "Pathum Nissanka": {
+    "name": "Pathum Nissanka",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F34256.png&brand=ipl",
+    "sha256": "7a96a0410b0e1bc523e1a0e7f32c46ba11a88943843919d9f5548d4e35e519d3",
+    "bytes": 45833
+  },
+  "Sean Abbott": {
+    "name": "Sean Abbott",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7156%2F1153%2F13491.png&brand=ipl",
+    "sha256": "989a48c08d58df4fc17390d47ef8ac93896c46b8ed5423f238e423e2d6e3d82a",
+    "bytes": 44460
+  },
+  "Michael Bracewell": {
+    "name": "Michael Bracewell",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7784%2F2138%2F16042.png&brand=ipl",
+    "sha256": "24535a4a0dc661e264bda5b575455c8953ae7b8fc8fde8ca6541eb3106251978",
+    "bytes": 46742
+  },
+  "Ben Dwarshuis": {
+    "name": "Ben Dwarshuis",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F46139.png&brand=ipl",
+    "sha256": "9bc380662bf66d1eeac2c1db42a54ade3f2351879d28ac04d4b2d2d7f60e96b2",
+    "bytes": 45242
+  },
+  "Zak Foulkes": {
+    "name": "Zak Foulkes",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F75966.png&brand=ipl",
+    "sha256": "a6b78706984d9ae9afa6f2556baacfa0cc6d1d189b2c30ee72b0ae0198d4d54b",
+    "bytes": 45312
+  },
+  "Jason Holder": {
+    "name": "Jason Holder",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F12693.png&brand=ipl",
+    "sha256": "58c16ad316763e4d4c77bf6adc63473bfa0cc3282ab5c5df9fe3c9fd8c479586",
+    "bytes": 51923
+  },
+  "Daryl Mitchell": {
+    "name": "Daryl Mitchell",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7156%2F1558%2F18053.png&brand=ipl",
+    "sha256": "a5cd521e987ed803886bdeef95d17a2b97774dcd7008c07dbc6f3fe318c0ecb0",
+    "bytes": 47030
+  },
+  "Daniel Sams": {
+    "name": "Daniel Sams",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7784%2F2880%2F67117.png&brand=ipl",
+    "sha256": "163acfc91360265696dbbf3a6f1ca17556a584a1a3da51cc6da98f5b0d38c286",
+    "bytes": 48016
+  },
+  "Matthew Short": {
+    "name": "Matt Short",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F20067.png&brand=ipl",
+    "sha256": "f40b79534e4898d41c4265d5200edf8df11efae6cce261638a7a0903473fdff1",
+    "bytes": 45897
+  },
+  "Tom Banton": {
+    "name": "Tom Banton",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F65546.png&brand=ipl",
+    "sha256": "0d40f09d749727f2aa509cde371a3b66a768b6e17c550f407240813d20c49f79",
+    "bytes": 44127
+  },
+  "Jordan Cox": {
+    "name": "Jordan Cox",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F69894.png&brand=ipl",
+    "sha256": "d1831766f6db094c34f11063236c7e9ab4fce5382056689fac84bc0c9ebad136",
+    "bytes": 44538
+  },
+  "Josh Inglis": {
+    "name": "Josh Inglis",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F37709.png&brand=ipl",
+    "sha256": "56861021134e973ff99d132fdeb113f46eccf0e916360f58b9e592bea9c565c0",
+    "bytes": 48808
+  },
+  "Tim Seifert": {
+    "name": "Tim Seifert",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F20009.png&brand=ipl",
+    "sha256": "b420df25523949305a4bbd9c547665c3aa32bc11c048893b958a35e5a50fc389",
+    "bytes": 54792
+  },
+  "Kyle Jamieson": {
+    "name": "Kyle Jamieson",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F33186.png&brand=ipl",
+    "sha256": "4a380040bbfa43a27481b94f00c368e0d8232b473cd618561b573c4df1886f40",
+    "bytes": 47473
+  },
+  "Adam Milne": {
+    "name": "Adam Milne",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F20007.png&brand=ipl",
+    "sha256": "2d1574c8f91f23a44562df19393c39df9292d4a1fe4124dda7cbfdb9c3c0da2b",
+    "bytes": 46590
+  },
+  "Lungisani Ngidi": {
+    "name": "Lungi Ngidi",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F28230.png&brand=ipl",
+    "sha256": "8ac5f106a8d07f0014acb547598d6c1fb8f9308e76da825c60f07bb1e1bc6be4",
+    "bytes": 49597
+  },
+  "William Orourke": {
+    "name": "Will O'Rourke",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F2880%2F73001.png&brand=ipl",
+    "sha256": "68177b178bbb15aba54aee587e871e92aaabb0cbf8e96aa59102611ad3c83d43",
+    "bytes": 52000
+  },
+  "Mustafizur Rahman": {
+    "name": "Mustafizur Rahman",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1558%2F19402.png&brand=ipl",
+    "sha256": "7c7aff3ba05aad3d8694ec5a9c7d16cadf93a201719659224fa8a3f186f47aef",
+    "bytes": 27507
+  },
+  "Chetan Sakariya": {
+    "name": "Chetan Sakariya",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1558%2F67822.png&brand=ipl",
+    "sha256": "5c16eb69fea04b40984b2c338b148dc8ab5e5fa1f27df0b8f86b811ee82183c6",
+    "bytes": 26826
+  },
+  "Kuldeep Sen": {
+    "name": "Kuldeep Sen",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F69043.png&brand=ipl",
+    "sha256": "6b89b336a2a1fd502b74f54560433c75291109db3ed96293f54d38c7e6c7dabd",
+    "bytes": 44918
+  },
+  "Danish Malewar": {
+    "name": "Danish Malewar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F87528.png&brand=ipl",
+    "sha256": "a82b091cdede116a34b0d4a75f9667aa14f25bb427315e0296f342b5fa86e786",
+    "bytes": 42955
+  },
+  "Akshat Raghuwanshi": {
+    "name": "Akshat Raghuwanshi",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F76593.png&brand=ipl",
+    "sha256": "8a0f91003b51cd8df8abfa32d73b5f97207adfdccbe42fc4926ae3a0624eeaad",
+    "bytes": 43997
+  },
+  "Manan Vohra": {
+    "name": "Manan Vohra",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1558%2F13576.png&brand=ipl",
+    "sha256": "c83ba1adbf04f72a139379f249f826884de0827ee8e619075785ada93f1e733a",
+    "bytes": 27520
+  },
+  "Satvik Deswal": {
+    "name": "Satvik Deswal",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F91380.png&brand=ipl",
+    "sha256": "0667c1be256504e45bf7d8c42410d8b303a166e8a2ee45b8ef1e3eddc08ec1e6",
+    "bytes": 43567
+  },
+  "Aman Khan": {
+    "name": "Aman Khan",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1622%2F74139.png&brand=ipl",
+    "sha256": "cae49d7fc0290f06f11afbb22a29862cce9d511140a668b5108400ad14227b9b",
+    "bytes": 47563
+  },
+  "Darshan Nalkande": {
+    "name": "Darshan Nalkande",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F2040%2F66390.png&brand=ipl",
+    "sha256": "f5384dbeaa29d3c906fffc9b59dc6133752bb5f72897ea828700e64137191839",
+    "bytes": 16964
+  },
+  "Vicky Ostwal": {
+    "name": "Vicky Ostwal",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F76210.png&brand=ipl",
+    "sha256": "656dec549c3db8958e7a4f473aac5c0f61c365062b1898c3a7149a11fc2fac26",
+    "bytes": 45548
+  },
+  "Suyash Prabhudessai": {
+    "name": "Suyash Prabhudessai",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F2138%2F65732.png&brand=ipl",
+    "sha256": "2c3556c29b0ab6d6333b37fcaa3f16069117ca9abc121a80b3e786a22e362a75",
+    "bytes": 45306
+  },
+  "Mayank Rawat": {
+    "name": "Mayank Rawat",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F65550.png&brand=ipl",
+    "sha256": "90128b6d9eae558ede836d7f652027c8da33f000ef6493beab99c98020a39fda",
+    "bytes": 42459
+  },
+  "Mangesh Yadav": {
+    "name": "Mangesh Yadav",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F90854.png&brand=ipl",
+    "sha256": "564e3c3c9f90dfe41b4de4505cca53e998e80055788dd2459cda7a0c4bf99818",
+    "bytes": 43523
+  },
+  "Salil Arora": {
+    "name": "Salil Arora",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F72140.png&brand=ipl",
+    "sha256": "29468d2aed6f7d549c86b6f2cdccd9b4f76d1e9fe475dbad9b54da56ecb2148c",
+    "bytes": 48121
+  },
+  "Saurav Chuahan": {
+    "name": "Saurav Chauhan",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F2138%2F75658.png&brand=ipl",
+    "sha256": "6c30a0780c7b8ea388b684b61546fb4fb4f25e2e0c6f32ac3a0a95f755c6758d",
+    "bytes": 45365
+  },
+  "Kunal Rathore": {
+    "name": "Kunal Rathore",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1558%2F78776.png&brand=ipl",
+    "sha256": "313cd7dfcd4ea2185cc713a6602ce45fbb422500a435e15a3dab2fe0e1c8ca35",
+    "bytes": 43709
+  },
+  "Ravi Singh": {
+    "name": "Ravi Singh",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F86608.png&brand=ipl",
+    "sha256": "08c7bdb61b0d5800819312ab8bc18a9f26e42675fec3e670cfce1ee0137005e3",
+    "bytes": 47548
+  },
+  "K.M Asif": {
+    "name": "KM Asif",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1622%2F67628.png&brand=ipl",
+    "sha256": "e165d853aeb158886d47a71e09cb904d80e6313cda2984e30c8cd8731a2d6d51",
+    "bytes": 26726
+  },
+  "Sakib Hussain": {
+    "name": "Sakib Hussain",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F78832.png&brand=ipl",
+    "sha256": "7cab6d9750037ce51983f2e9c7537020f9c7da2fcdb5521c777889e27b36f3df",
+    "bytes": 47969
+  },
+  "Mohammad Izhar": {
+    "name": "Mohammed Izhar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F94165.png&brand=ipl",
+    "sha256": "224df2454b197e57199c85006a48e69a939a84060a845b4ac63a35aa07c6fff7",
+    "bytes": 46674
+  },
+  "PV.Satyanarayana Raju": {
+    "name": "Satyanarayana Raju",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1854%2F84385.png&brand=ipl",
+    "sha256": "3cada1af03b01ab099f2e582d6441c0e953b897e147c8516edad2544844bd2a1",
+    "bytes": 42363
+  },
+  "Onkar Tarmale": {
+    "name": "Onkar Tarmale",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F90418.png&brand=ipl",
+    "sha256": "2e1840b282633bd78f76850a06c8cf23d953aafa9b3849a95558416b2f1509c0",
+    "bytes": 48416
+  },
+  "Prithviraj Yarra": {
+    "name": "Yarra Prithviraj",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F66840.png&brand=ipl",
+    "sha256": "bd436ac72485e003dd2fed7434a26b2637f35b66f65408f3b375d231c0addad3",
+    "bytes": 50152
+  },
+  "Murugan Ashwin": {
+    "name": "Murugan Ashwin",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F2040%2F19799.png&brand=ipl",
+    "sha256": "614cf9cb3b7275a58502c7627a662bb1794ca5e46d9744a129b1cbe13f4a8d61",
+    "bytes": 26291
+  },
+  "Tejas Baroka": {
+    "name": "Tejas Baroka",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7156%2F1558%2F65904.png&brand=ipl",
+    "sha256": "2b81a7485dd6b88a425cb1a3fd35e3bdc3a8666e182412f2ae04c42b165b18cd",
+    "bytes": 43960
+  },
+  "K.C. Cariappa": {
+    "name": "KC Cariappa",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1558%2F17610.png&brand=ipl",
+    "sha256": "c28b8dfe15d8876de5a8f1561b1c1225d910c61d09c3eda9783e162014fab102",
+    "bytes": 16631
+  },
+  "Pravin Dubey": {
+    "name": "Praveen Dubey",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F49784.png&brand=ipl",
+    "sha256": "7d9db28d6bfc53598111a81c09ba2dfc832ab19265fc35f14994c1fc67d37f8e",
+    "bytes": 45606
+  },
+  "Mohit Rathee": {
+    "name": "Mohit Rathee",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F2138%2F79513.png&brand=ipl",
+    "sha256": "6e7b2ec95598dede7a08bf643038bd96daf1233fb51edcfc54e63ff728ed887d",
+    "bytes": 44094
+  },
+  "Himanshu Sharma": {
+    "name": "Himanshu Sharma",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F2138%2F80523.png&brand=ipl",
+    "sha256": "e20932e2656cd4267f4e4cebc42056e0d4b9774fdb61b0c3086ddf2c0d02dce7",
+    "bytes": 45363
+  },
+  "Rehan Ahmed": {
+    "name": "Rehan Ahmed",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F74536.png&brand=ipl",
+    "sha256": "804b7a233df70db8165ab42d721a07947c455bc33828cf6732d1299b6cfe995e",
+    "bytes": 46292
+  },
+  "Cooper Connolly": {
+    "name": "Cooper Connolly",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F73472.png&brand=ipl",
+    "sha256": "4ab38e54e36282218392639e3fabdece5b4e93d974d0189d18afcf9bad547ee8",
+    "bytes": 49435
+  },
+  "Tom Curran": {
+    "name": "Tom Curran",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1396%2F21836.png&brand=ipl",
+    "sha256": "dfb49135f43043c5721d5d1624a6640cc095bb2b6d61d29dd5b5fe3e11c9f799",
+    "bytes": 27531
+  },
+  "George Linde": {
+    "name": "George Linde",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2880%2F20680.png&brand=ipl",
+    "sha256": "02b2d087b5bcb444fda30397b1adfb671aef8355da8741f20be5ad740b552158",
+    "bytes": 45410
+  },
+  "Richard Gleeson": {
+    "name": "Richard Gleeson",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F1622%2F27711.png&brand=ipl",
+    "sha256": "b6df7c68afb2b117909cc6532b5586e22c973e5018e26f3615f5eaccd9481051",
+    "bytes": 49730
+  },
+  "Alzarri Joseph": {
+    "name": "Alzarri Joseph",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7156%2F2879%2F28768.png&brand=ipl",
+    "sha256": "332f121ea025566fc27332d7c226bd8b899134f10b4ad7f69a5a2ea388ec43a3",
+    "bytes": 48137
+  },
+  "Shamar Joseph": {
+    "name": "Shamar Joseph",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F2880%2F80387.png&brand=ipl",
+    "sha256": "b006440b7b61e4e51b4476e24e37dba2a61d6cc1a59ad694006352d3f1b2693c",
+    "bytes": 54110
+  },
+  "Riley Meredith": {
+    "name": "Riley Meredith",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F2040%2F65395.png&brand=ipl",
+    "sha256": "f25e1e37bb67f6ce0abb2c37a057a8e73824269a86dc9c0dbc0ba218c564a535",
+    "bytes": 27160
+  },
+  "Jhye Richardson": {
+    "name": "Jhye Richardson",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F2040%2F38163.png&brand=ipl",
+    "sha256": "ece3b6e27e8815653ca9faf31332c9a5e6cc72d702a4cea26b63b0e7f6d79122",
+    "bytes": 29932
+  },
+  "Navdeep Saini": {
+    "name": "Navdeep Saini",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F16790.png&brand=ipl",
+    "sha256": "ba015aa248efc7ee7956bb1380fa9838639090f448f23fe7755ad40f7d888226",
+    "bytes": 48948
+  },
+  "Naveen Ul Haq": {
+    "name": "Naveen-ul-Haq",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F2880%2F39409.png&brand=ipl",
+    "sha256": "3bdb34b7342af64cfafd7b2b50269b57dba0bc305a6eadfb8111fd99bcc74527",
+    "bytes": 52256
+  },
+  "Luke Wood": {
+    "name": "Luke Wood",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F41054.png&brand=ipl",
+    "sha256": "c248a2b1417d4995b76f113d9c37fc23caf81ea8857a1e83c1aafee43d33d70f",
+    "bytes": 46021
+  },
+  "Sahil Parakh": {
+    "name": "Sahil Parakh",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1396%2F86350.png&brand=ipl",
+    "sha256": "70a01701aae5d628c5c136d024ffdef7720e279a2af5b8d84c8df6d096dee39a",
+    "bytes": 47990
+  },
+  "Manoj Bhandage": {
+    "name": "Manoj Bhandage",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F2138%2F69468.png&brand=ipl",
+    "sha256": "fdfb7298e474569e34c7622e6c1d5eb28cbfe513887a862cab2e6c6ad3897cc5",
+    "bytes": 43267
+  },
+  "Mayank Dagar": {
+    "name": "Mayank Dagar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F2138%2F20221.png&brand=ipl",
+    "sha256": "2a495a38ae201c18116be616b839724900e3b60a5c6207e14ecc7443d506f90f",
+    "bytes": 48581
+  },
+  "Raghav Goyal": {
+    "name": "Raghav Goyal",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7784%2F1854%2F80524.png&brand=ipl",
+    "sha256": "eacbc58c663eac877c36de5b0992864dba5aad93ec9bb414edbc9197540b1870",
+    "bytes": 45698
+  },
+  "Manvanth Kumar": {
+    "name": "Manvanth Kumar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1396%2F83061.png&brand=ipl",
+    "sha256": "b7d87b908a4460c2c190ace20f9a4b033a5ede106aefcaf29188041f1c9a12ba",
+    "bytes": 42536
+  },
+  "Abid Mushtaq": {
+    "name": "Abid Mushtaq",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F1558%2F72285.png&brand=ipl",
+    "sha256": "b2b6e7a77118be823a35f84f5cfbb4f0e827b1dccbf491788755658d8c42913f",
+    "bytes": 45734
+  },
+  "Jalaj Saxena": {
+    "name": "Jalaj Saxena",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F2040%2F18578.png&brand=ipl",
+    "sha256": "0ef87468e6bd3b835ec69d1a507e7d0270ce6717a404f5235f4e85256746d38c",
+    "bytes": 27413
+  },
+  "Hritik Shokeen": {
+    "name": "Hrithik Shokeen",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7156%2F1854%2F70447.png&brand=ipl",
+    "sha256": "c0d11a98940047992c5762a6cf70bb289b53f9c22a0345364da0436686c110bc",
+    "bytes": 47810
+  },
+  "Jagadeesha Suchith": {
+    "name": "Jagadeesha Suchith",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7156%2F1153%2F26241.png&brand=ipl",
+    "sha256": "d7fdba624b22e1089406966e7f9e2a631a3f30345939718b9f6630a846773728",
+    "bytes": 43389
+  },
+  "Tanay Thyagarajann": {
+    "name": "Tanay Thyagarajan",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F2040%2F67638.png&brand=ipl",
+    "sha256": "9b5a15ec485393da7ca988fb73107fcf9ed440e88b2c3fe1ce393617ae381a76",
+    "bytes": 46461
+  },
+  "Connor Esterhuizen": {
+    "name": "Connor Esterhuizen",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F77032.png&brand=ipl",
+    "sha256": "76ba31765bb89f009ba4d3911fb2fccc7629257c7b33357824a4236e98729e9b",
+    "bytes": 45421
+  },
+  "Kuldip Yadav": {
+    "name": "Kuldip Yadav",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1558%2F72756.png&brand=ipl",
+    "sha256": "2095b5627f59c5e2551057bb77c1f583d822496278a702cddfe1348f7eeda2d2",
+    "bytes": 26884
+  },
+  "Amit Kumar": {
+    "name": "Amit Kumar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F94972.png&brand=ipl",
+    "sha256": "df8664f652a0d5a4a3181d08c37868d5a9e06cdca17e360533f1a023bf8b0775",
+    "bytes": 50566
+  },
+  "Vishal Nishad": {
+    "name": "Vishal Nishad",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2040%2F86859.png&brand=ipl",
+    "sha256": "d7eade0bf215150557006115e79f4122005dbae045e1d0a07356403a9188448c",
+    "bytes": 44284
+  },
+  "Jhathavedh Subramanyan": {
+    "name": "Jhatavedh Subramanyan",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F1153%2F65717.png&brand=ipl",
+    "sha256": "12490d72f50866bd678d79e9beab62b9ab43b821130f760b9a7dc8ddb12d99c6",
+    "bytes": 48295
+  },
+  "Charith Asalanka": {
+    "name": "Charith Asalanka",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8502%2F1854%2F26487.png&brand=ipl",
+    "sha256": "a95e6c7b514c3d6083896386f791414509f8850b6eee3247fb9eab9f8cb17d91",
+    "bytes": 44380
+  },
+  "George Garton": {
+    "name": "George Garton",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F2138%2F32436.png&brand=ipl",
+    "sha256": "9f9dfd62fe3b8b455b5cfc3f357e6d926d5c72f57cf682f296f5a8a48f028763",
+    "bytes": 16149
+  },
+  "Kyle Mayers": {
+    "name": "Kyle Mayers",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F2880%2F15108.png&brand=ipl",
+    "sha256": "be9f3af00359e3b553c71706867124d72c2c6d897248eff00f68273061d46733",
+    "bytes": 52373
+  },
+  "Dwaine Pretorius": {
+    "name": "Dwaine Pretorius",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7156%2F1622%2F21290.png&brand=ipl",
+    "sha256": "86c19d22126cc7c5190b8ed84a44a25dfbd2cc34375de689dd4b438fc621bc99",
+    "bytes": 42767
+  },
+  "Sandeep Warrier": {
+    "name": "Sandeep Warrier",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6906%2F1873%2F18585.png&brand=ipl",
+    "sha256": "b62a07f08b0923a50bd1aa50745886efea07cc8dfda09a3e6f2ffe089412d376",
+    "bytes": 28071
+  },
+  "Atharva Ankolekar": {
+    "name": "Atharva Ankolekar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F72144.png&brand=ipl",
+    "sha256": "a8228e2107cd984e8375cda9f31b2286f27bbe89ba31e38e76823a140d16d544",
+    "bytes": 42391
+  },
+  "Abdul Bazith": {
+    "name": "Abdul Basith",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7784%2F1558%2F75788.png&brand=ipl",
+    "sha256": "24ceb32327515cea4847163ef0cfda1391b568e99aca8c677a6875930ed0fa6f",
+    "bytes": 47407
+  },
+  "Shams Mulani": {
+    "name": "Shams Mulani",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F1854%2F67620.png&brand=ipl",
+    "sha256": "68e10ea6e777477567fc735a885d546b7cb7f634ce29baaa11b3501ded7fb29d",
+    "bytes": 47998
+  },
+  "Ripal Patel": {
+    "name": "Ripal Patel",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7784%2F1396%2F72258.png&brand=ipl",
+    "sha256": "b5e0855cdfd46b46162a51f34091f53f9b550983d86e59891afc368cdb0206e5",
+    "bytes": 45623
+  },
+  "Vivrant Sharma": {
+    "name": "Vivrant Sharma",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7784%2F1153%2F74044.png&brand=ipl",
+    "sha256": "fd7736157fae84186ad6cbb3d5fa16836c915f9c170fc3f09279c7c757b8346a",
+    "bytes": 44975
+  },
+  "Sanjay Yadav": {
+    "name": "Sanjay Yadav",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7156%2F1854%2F65517.png&brand=ipl",
+    "sha256": "bbb70df78b501f960760fa386cedd25f5417ef2054bbd06f51d62c0d2623e600",
+    "bytes": 49074
+  },
+  "Praful Hinge": {
+    "name": "Praful Hinge",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F87731.png&brand=ipl",
+    "sha256": "7eb09d3fbb591cad50c6becb6a51546f17957a0e806ba0ac45b81990e8ace53e",
+    "bytes": 49576
+  },
+  "Kulwant Khejroliya": {
+    "name": "Kulwant Khejroliya",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2879%2F65727.png&brand=ipl",
+    "sha256": "ed90af6cc1251a0d5c0a1836685f67f00d08cf6a49738e1db116fe3e838d85e0",
+    "bytes": 45644
+  },
+  "Rajan Kumar": {
+    "name": "Rajan Kumar",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F2138%2F78734.png&brand=ipl",
+    "sha256": "758083c153eb1cc9e48a1291721097444ddeb14159620f2fac42c6e7712f179f",
+    "bytes": 47658
+  },
+  "Ishan Porel": {
+    "name": "Ishan Porel",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7156%2F2040%2F65552.png&brand=ipl",
+    "sha256": "7426d1f60e916844c95e15a4fb83bf2697ce9f98e4f0126be65c2e9d79b179e6",
+    "bytes": 43981
+  },
+  "Joshua Little": {
+    "name": "Josh Little",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F2879%2F42658.png&brand=ipl",
+    "sha256": "eafc1a886b740df15436f630faa81c39211c3f2740ed60d9a8965e3add138194",
+    "bytes": 42673
+  },
+  "Obed McCoy": {
+    "name": "Obed McCoy",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7784%2F1558%2F61917.png&brand=ipl",
+    "sha256": "93349f1677215ead6c10f1e0058fc554115e3361a1750239e85209caf2cd204d",
+    "bytes": 49726
+  },
+  "Billy Stanlake": {
+    "name": "Billy Stanlake",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F6752%2F1153%2F21308.png&brand=ipl",
+    "sha256": "8a08c8527c8260e784bb3af12444747b1d1f2280bf55230a3d622d5714e1dfca",
+    "bytes": 15833
+  },
+  "Krains Fuletra": {
+    "name": "Krains Fuletra",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1153%2F88265.png&brand=ipl",
+    "sha256": "f5aaafd3e68ae1d7be6678b86a988c8d594be78a767191da34f9ca3f115f09c9",
+    "bytes": 46859
+  },
+  "R.Sonu Yadav": {
+    "name": "Sonu Yadav",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F7784%2F2138%2F69315.png&brand=ipl",
+    "sha256": "3f8046711d9213db9d587b322bef76ab7c5544a5ae8f14905fc39d82fc6adfc1",
+    "bytes": 47070
+  },
+  "Vihaan Malhotra": {
+    "name": "Vihaan Malhotra",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F86477.png&brand=ipl",
+    "sha256": "722ae54beaad3d9af6e5d2948af51cc753aed8956c883956f02ffe7b987374dd",
+    "bytes": 45576
+  },
+  "Sarthak Ranjan": {
+    "name": "Sarthak Ranjan",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F60039.png&brand=ipl",
+    "sha256": "14dc9372ff63908fe2578dfe91302f279a495d47c83c2060ce2af4f74876cafa",
+    "bytes": 49107
+  },
+  "Brijesh Sharma": {
+    "name": "Brijesh Sharma",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F90896.png&brand=ipl",
+    "sha256": "870fcd92cbdd0c0abd4950f1053d025aa47bb03ce0d6d8f4d7bc3fe7e3220be9",
+    "bytes": 44334
+  },
+  "Kanishk Chouhan": {
+    "name": "Kanishk Chouhan",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F2138%2F91255.png&brand=ipl",
+    "sha256": "d4c656e4842378638585fb3921a53e4ee370681285bffff97867fa2f278b9c71",
+    "bytes": 43876
+  },
+  "Daksh Kamra": {
+    "name": "Daksh Kamra",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1873%2F95066.png&brand=ipl",
+    "sha256": "7a79ff9684082096eb408e83ec390882ac537dafdb73b5a96977ed72e7b6934a",
+    "bytes": 51652
+  },
+  "Lalit Yadav": {
+    "name": "Lalit Yadav",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8190%2F1396%2F67380.png&brand=ipl",
+    "sha256": "692b0f1122e6e56eec038fd96de8216d8bb145511c5f8a024a1384e41311d3ca",
+    "bytes": 44113
+  },
+  "Krish Bhagat": {
+    "name": "Krish Bhagat",
+    "source": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1854%2F87066.png&brand=ipl",
+    "sha256": "436e0d49164fc2841f1933097d853f62b95dcab963f414223099c84756a71a56",
+    "bytes": 48314
+  }
+}

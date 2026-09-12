@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {transformSync} from 'esbuild';
 const js=transformSync(readFileSync('lib/game.ts','utf8'),{loader:'ts',format:'esm'}).code;
-const {advance,bid,canBid,teams,players,isRecordSale}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
+const {advance,bid,canBid,teams,players,isRecordSale,auctionResults}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
 const g={code:'TEST',host:'x',phase:'live',seats:Object.fromEntries(teams.map(t=>[t.id,{name:'AI',token:'',bot:true,purse:12000,squad:[]}])),index:0,price:0,leader:null,deadline:14000,nextBot:2500,passed:[],log:[],round:1};
 for(let now=3000;now<100000000&&g.phase!=='finished';now+=2000)advance(g,now);
 assert.equal(g.phase,'finished');const won=[];for(const s of Object.values(g.seats)){assert.ok(s.purse>=0);assert.ok(s.squad.length<=25);assert.ok(s.squad.filter(x=>players[x.player].country!=='India').length<=8);assert.equal(s.purse+s.squad.reduce((n,x)=>n+x.price,0),12000);won.push(...s.squad.map(x=>x.player))}assert.equal(new Set(won).size,won.length);assert.ok(won.length>0);
@@ -21,3 +21,12 @@ record.phase='finished';assert.equal(isRecordSale(record),false);
 console.log('PASS: record banner only for confirmed sold award above previous sales, never live bids or ties.');
 
 assert.ok(players.length>300);assert.equal(new Set(players.map(p=>p.name.toLowerCase().replace(/[^a-z]/g,''))).size,players.length);players.forEach((p,i)=>{assert.equal(p.id,i);assert.ok(['BAT','BOWL','WK','AR'].includes(p.role));assert.ok(p.country);assert.ok(p.base>0)});assert.equal(players[0].name,'Rishabh Pant');assert.equal(players[59].name,'Prithvi Shaw');console.log(`PASS: ${players.length} unique players, valid roles and stable legacy IDs.`);
+
+const outcomeGame={...structuredClone(record),phase:'live',index:2};
+let history=auctionResults(outcomeGame);assert.equal(history.length,2);assert.equal(history.find(r=>r.player.id===0).price,200);
+outcomeGame.index=3;history=auctionResults(outcomeGame);assert.equal(history[0].player.id,2);assert.equal(history[0].team,undefined);assert.equal(history[0].price,0);
+assert.ok(!history.some(r=>r.player.id===3),'active player must not be marked unsold');
+outcomeGame.phase='sold';history=auctionResults(outcomeGame);assert.equal(history[0].player.id,3);assert.equal(history[0].team,undefined);
+console.log('PASS: final sold prices and unsold outcomes, excluding unfinished lots.');
+
+assert.equal(auctionResults({...outcomeGame,phase:'finished',index:60}).length,60,'legacy finished rooms must not label newly appended players unsold');

@@ -147,3 +147,47 @@ body{background-image:radial-gradient(ellipse at 0% 5%,#256ddaaf,transparent 47%
  .app-shell .bidding-zone{padding:14px 22px}
  .app-shell .controls .purse-track{margin-top:10px}
 }
+
+/* Full-size stage, clear portraits, and a compact desktop dock in the page flow. */
+.player-portrait{display:inline-flex;width:112px;height:138px;flex-shrink:0;overflow:hidden;border-radius:18px;align-items:end;justify-content:center;background:linear-gradient(145deg,#80dbff55,#bb86ff66,#ed84c455);border:1px solid #d5e9ff66;box-shadow:inset 0 1px #fff5,0 12px 32px #11173844}
+.player-portrait img{width:100%;height:100%;object-fit:contain;object-position:center bottom}.portrait-fallback{display:flex;height:100%;flex-direction:column;align-items:center;justify-content:center;gap:7px;color:#e3edff}.portrait-fallback svg{width:50px;height:50px;stroke-width:1.3}.portrait-fallback small{font-size:9px;text-align:center;line-height:1.3;padding:0 4px}.portrait-small{width:44px;height:50px;border-radius:10px;box-shadow:none}.portrait-small .portrait-fallback svg{height:25px;width:25px}.portrait-small .portrait-fallback small{display:none}.pool-list>div>.player-portrait{flex:none}.pool-list strong>small{text-align:right;font-size:9px;letter-spacing:.6px}.unsold-label{color:#ffb4c7!important}
+.hall-board>.player-portrait{position:absolute;left:10px;bottom:7px;width:64px;height:78px;background:#ddf0ff14;border-color:#e2eaff33}.hall-board{padding-left:85px}.hall-orbit{position:absolute;left:15%;top:30px;width:70%;height:260px;border:1px solid #90e5ff33;border-radius:50%;transform-style:preserve-3d;pointer-events:none;box-shadow:0 0 25px #79dfff14;animation:hall-orbit 18s linear infinite}.orbit-two{animation-delay:-9s;border-color:#fc9de955}
+@keyframes hall-orbit{from{transform:rotateY(0deg) rotateX(65deg)}to{transform:rotateY(360deg) rotateX(65deg)}}
+@media(min-width:801px){
+ .app-shell main>.auction-hall .hall-viewport{height:320px}
+ .app-shell main>.auction-hall .hall-world{width:100%;height:320px;transform:none;animation:hall-camera 18s ease-in-out infinite}
+ .app-shell main>.hall-collapsed .hall-viewport{height:0}
+ .app-shell main>.auction-hall .hall-stage{left:20%;width:60%;top:25px;height:170px}
+ .app-shell main>.auction-hall .hall-board{height:125px;gap:9px;padding-left:100px;border-width:3px}
+ .app-shell main>.auction-hall .hall-board strong{font-size:clamp(24px,2.8vw,37px);line-height:1.1}
+ .app-shell main>.auction-hall .hall-board small{font-size:10px}.app-shell main>.auction-hall .hall-board>span:not(.player-portrait){font-size:16px}
+ .app-shell main>.auction-hall .hall-board>.player-portrait{width:80px;height:103px}
+ .app-shell main>.auction-hall .hall-floor{top:150px}.app-shell main>.auction-hall .hall-delegations{bottom:5px}
+ .app-shell main>.auction-hall .hall-delegations .delegation{height:57px}
+ .app-shell .mobile-auction-dock{position:sticky;top:8px;bottom:auto;left:auto;right:auto;transform:none;width:100%;margin:0 0 12px;padding:8px 14px;border-radius:16px;gap:20px;box-shadow:0 8px 24px #050b2550}
+ .app-shell .dock-status{flex:1.3}.app-shell .dock-status b{font-size:13px}.app-shell .dock-status small{font-size:9px}.app-shell .dock-actions{flex:1;max-width:410px}
+ .app-shell .mobile-auction-dock .primary-button,.app-shell .dock-pass{height:38px;font-size:12px;border-radius:11px}
+ .app-shell .dock-error{bottom:auto;top:100%}
+ .app-shell main{padding-bottom:35px}
+}
+@media(max-width:800px){
+ .player-identity>.player-portrait{width:88px;height:110px}
+ .hall-board{padding-left:55px}.hall-board>.player-portrait{width:37px;height:49px;left:7px;bottom:5px;border-radius:7px}
+ .hall-board strong{font-size:16px}.hall-orbit{height:150px;left:5%;width:90%}
+ .app-shell .mobile-auction-dock{padding:7px 12px calc(7px + env(safe-area-inset-bottom))}
+ .app-shell .mobile-auction-dock .primary-button,.app-shell .dock-pass{height:43px}.app-shell .dock-status{margin-bottom:6px}
+}
+.room-doors{position:fixed;inset:0;z-index:90;perspective:1200px;pointer-events:none;overflow:hidden;animation:doors-fade 1.8s both}
+.auction-door{position:absolute;top:0;bottom:0;width:50%;background:repeating-linear-gradient(90deg,transparent 0 28px,#e7bcff12 29px 30px),linear-gradient(120deg,#142949,#352b64 55%,#65406e);border:2px solid #d2c6ff80;box-shadow:inset 0 0 80px #090f32,0 0 40px #e6b1ff66;display:flex;align-items:center;justify-content:center;transform-style:preserve-3d;backface-visibility:hidden}
+.auction-door>span{font-size:clamp(18px,3vw,44px);font-weight:900;letter-spacing:3px;color:#f1dfff;text-shadow:0 0 22px #e4a4ff}
+.auction-door>i{position:absolute;top:52%;height:80px;width:8px;border-radius:9px;background:linear-gradient(#fff4d1,#c69159);box-shadow:0 0 15px #ffd593}
+.door-left{left:0;transform-origin:left center;animation:door-open-left 1.55s .12s cubic-bezier(.25,.65,.2,1) both}.door-right{right:0;transform-origin:right center;animation:door-open-right 1.55s .12s cubic-bezier(.25,.65,.2,1) both}.door-left>i{right:22px}.door-right>i{left:22px}
+.door-light{position:absolute;inset:0;background:radial-gradient(ellipse,#e6d4ffcc,transparent 70%);animation:door-light 1.8s both}.door-welcome{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:#fff;animation:door-caption 1.8s both}.door-welcome b{font-size:18px}
+@keyframes door-open-left{from{transform:rotateY(0)}to{transform:rotateY(-105deg)}}@keyframes door-open-right{from{transform:rotateY(0)}to{transform:rotateY(105deg)}}@keyframes doors-fade{0%,75%{opacity:1}100%{opacity:0}}@keyframes door-light{0%{opacity:0}40%{opacity:.8}100%{opacity:0}}@keyframes door-caption{0%,15%{opacity:0;transform:translateZ(-100px)}45%{opacity:1}100%{opacity:0;transform:translateZ(100px)}}
+@media(prefers-reduced-motion:reduce){.room-doors{display:none}.hall-orbit{animation:none}.app-shell main>.auction-hall .hall-world{animation:none}}
+@media(min-width:801px){.app-shell .mobile-auction-dock>.primary-button{width:320px;max-width:45%;flex:none}.app-shell .dock-status{min-width:220px}}
+.room-doors{animation-duration:2.6s}.door-light,.door-welcome{animation-duration:2.6s}.auction-door{animation-duration:2.35s}
+@keyframes door-open-left{0%,20%{transform:rotateY(0)}100%{transform:rotateY(-105deg)}}@keyframes door-open-right{0%,20%{transform:rotateY(0)}100%{transform:rotateY(105deg)}}
+@media(min-width:801px){.app-shell>.mobile-auction-dock{width:auto;max-width:1552px;margin:0 24px 12px}.app-shell .dock-status>span:first-child b{overflow-wrap:anywhere}}
+@media(min-width:801px) and (max-width:1100px){.app-shell>.mobile-auction-dock{margin-left:16px;margin-right:16px}}
+@media(min-width:1600px){.app-shell>.mobile-auction-dock{margin-left:auto;margin-right:auto}}

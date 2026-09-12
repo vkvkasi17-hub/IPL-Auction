@@ -389,3 +389,10 @@ export function isRecordSale(g:Game){
  const previous=Object.values(g.seats).flatMap(s=>s.squad).filter(s=>s.player<g.index);
  return previous.length>0&&sale.price>Math.max(...previous.map(s=>s.price));
 }
+
+// Only completed lots have outcomes; a live leader is not yet a sale.
+export function auctionResults(g:Game){
+ const completed=g.phase==='finished'?Math.min(g.index,players.length):g.index+(g.phase==='sold'?1:0);
+ const awards=new Map(Object.entries(g.seats).flatMap(([id,seat])=>seat.squad.map(s=>[s.player,{team:teams.find(t=>t.id===id),price:s.price}] as const)));
+ return players.slice(0,completed).map(player=>({player,team:awards.get(player.id)?.team,price:awards.get(player.id)?.price||0})).reverse();
+}

@@ -34,6 +34,9 @@ jobs:
       - name: Check TypeScript
         run: npx --no-install tsc --noEmit
 
+      - name: Test homepage navigation
+        run: node tests/navigation.mjs
+
       - name: Test auction engine
         run: node tests/engine.mjs
 
